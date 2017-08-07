@@ -1,0 +1,61 @@
+body {
+	font-family:sans-serif;
+	background:#2C3E50;
+}
+
+.wlogin .col{
+	box-shadow:none;
+	background:transparent;
+	margin-top:10%;
+}
+
+.wlogin input{
+	width:100%;
+	position:relative;
+	max-width:400px;
+	height:40px;
+	font-size:16px;
+	padding-left:20px;
+
+}
+
+.user{
+	border:1px solid #BFBFCE;
+	border-bottom:0;
+	border-radius:8px 8px 0px 0px;
+}
+
+.key{
+	border:1px solid #BFBFCE;
+	border-top:1px solid transparent;
+	border-radius:0px 0px 8px 8px;
+}
+
+.key:focus{
+	border-top:1px solid #BFBFCE;
+}
+
+.wlogin button { 
+	color:#fff;
+	width:100%;
+	position:relative;
+	max-width:420px;
+	height:45px;
+	font-size:18px;
+	cursor:pointer;
+	margin-top:10px;
+	background:#11C0FF;
+	border:1px solid #11C0FF;
+}
+
+.tlogin {
+	font-size:35px;
+	color:#EFEFEF;
+	margin-bottom:10px;
+}
+
+.wlogin button:hover { 
+	background:#11ACE4;
+	transition-duration:.5s;
+}
+

@@ -1,0 +1,88 @@
+body {
+    font-family:sans-serif;
+}
+
+.box {
+  height: 300px;
+  width: 300px;
+  background: orange;
+  display:none;
+}
+
+#tombol {
+  padding: 10px;
+  color: #fff;
+  background: #34495E;
+  border: none;
+}
+
+.wadah {
+    background-color:#fff;
+    max-width:400px;
+    width: 100%;
+    height: auto;
+    text-align: justify;
+    top: 40%; 
+    margin-top: 10%;
+    position:relative ;
+    padding:5px;
+}
+
+input[type="text"], input[type="password"]{
+   	width:92%;
+   	height:50px; 
+    max-width: 325px;
+    font-size: 18px;
+    border:1px solid #CCCCCC;
+    box-shadow: 1px(0, 0, 0, 0.08);
+    margin-bottom: 8px;
+    padding-left:20px;
+    border-radius:4px;
+    font-family:sans-serif;
+    margin:10px;
+    padding-left:50px;
+    color:#666;
+}
+
+.blogin {
+    width:95%;
+    height:45px; 
+    max-width: 380px;
+    background:#49C5B9;
+    border-radius:4px;
+    border:2px solid #1BC0B2;
+    margin:0px 10px 10px 10px;
+    color:#FFF;
+    font-size:20px;
+    font-family:sans-serif;
+}
+
+
+.wadah img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    border:2px solid #E1E1E1;
+    top:-50px;
+    position:relative;
+    margin-bottom:-20px;
+    background:#49C5B9;
+}
+
+.i-user,
+.i-lock {
+    background-repeat: no-repeat; 
+    background-position: 12px 12px;
+    padding-left:30px;
+    background-size:30px 30px;
+
+}
+
+
+.i-user{
+    background-image:url('../img/social.png'); 
+}
+
+.i-lock {
+    background-image: url('../img/tool.png');
+}

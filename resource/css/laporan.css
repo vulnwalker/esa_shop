@@ -1,0 +1,87 @@
+
+table#t01 {
+	width:100%;
+	font-family:helvetica,arial,sans-serif; 
+	border-collapse: collapse; 
+	border: 1px solid #EEEEEE;
+  font-size:12.5px;
+  text-align:center;
+  color:#666;
+}
+
+table#t01 tr:nth-child(even) {
+  	background-color: #F5F5F5;
+}
+
+table#t01 tr:nth-child(odd) {
+    background-color:#fff;
+}
+
+table#t01 th {
+    background-color: #49C5B9;
+   	color:#FFF;
+	  height:40px;
+	  padding-left:8px;
+}
+
+table#t01 th:last-child {
+    text-align:center;
+}
+
+table#t01 td:last-child {
+    text-align:center;
+}
+
+table#t01 td.benar {
+    background:#E3E8EF;
+    border-bottom:2px solid #1ABC9C;
+    font-size:12px;
+/*    border-top:2px solid #1ABC9C;*/
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+.judul {
+    font-size: 25px;
+    font-style: arial;
+    position: relative;
+    margin-left: 90px;
+    margin-top: -80px;
+}
+
+.struk {
+    position: relative;
+    margin-top: 50px;
+}
+
+.judul span {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+table#struk {
+    font-size: 12px;
+    border-bottom: 2px solid #EEE;
+}
+
+table#struk td {
+    padding:5px 0;
+}
+
+.title {
+  font-size: 24px;
+  font-family: arial;
+  margin-top: 40px;
+}
+
+.tgl {
+  font-size: :10px;
+}
+
+.garis {
+  width: 400px;
+  float: left;
+}
