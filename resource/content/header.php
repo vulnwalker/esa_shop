@@ -14,16 +14,16 @@ echo'
 <div class="grid">
 	<di class="row">
 		<div class="atas">
-			<div class="col-wd-3">
+			<div class="col-wd-4">
 				<div class="col" id="logo">
 					<i class="fa fa-opencart"></i>
 					<div class="judul">
-						<b>ESA</b>Shop<br>
+						<b>Huzaini</b>Fashion<br>
 						<span>Online Shop</span>
 					</div>
 				</div>
 			</div>
-			<div class="col-wd-8">
+			<div class="col-wd-7">
 				<div class="col" id="pencarian">
 					<div align="right">
 					<form action="pencarian.php" method="GET">	

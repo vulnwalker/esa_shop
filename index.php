@@ -1,11 +1,15 @@
 <?php session_start();
-	include 'func/fungsi.php';
+include 'func/fungsi.php';
+$base_url   = "http://127.0.0.8/framework";
+setcookie('baseurl',$base_url);
+$base_dir  = getcwd();
+setcookie('basedir',$base_dir);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Esa Shop</title>
+	<title>Huzaini Fashion</title>
 	<link rel="icon" type="image/png" href="resource/img/8.png">
 	<link rel="stylesheet" type="text/css" href="resource/css/grid.css">
 	<link rel="stylesheet" type="text/css" href="resource/css/normalize.css">
@@ -61,8 +65,8 @@
 											require'resource/content/profile-ecommers.php';
 										break;
 
-										case 'kontakkami':
-											require'resource/content/produk.php';
+										case 'Kontak':
+											require'resource/content/kontak.php';
 										break;
 
 										case 'cara-belanja':

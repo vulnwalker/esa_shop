@@ -1,0 +1,1 @@
+<?php?><head><link rel="stylesheet" href="dialog/dialog.css" type="text/css" /><link rel="stylesheet" href="css/viewer.css" type="text/css" /><link rel="stylesheet" href="css/sislog.css" type="text/css" /><link rel="stylesheet" href="css/template_css.css" type="text/css" /><link rel="stylesheet" href="menu/menu_style.css" type="text/css" /></head>

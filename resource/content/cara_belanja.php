@@ -3,7 +3,7 @@
 		<div class="col-wd-12">
 			<div class="col-wd-4">
 				<div class="col kami">
-					<div class="judulnya">Esa Shop</div>
+					<div class="judulnya">Huzaini Fashion</div>
 					<i class="fa fa-opencart icon"></i>
 				</div>
 			</div>

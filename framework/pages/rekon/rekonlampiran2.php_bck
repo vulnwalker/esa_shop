@@ -1,0 +1,405 @@
+<?php
+
+class Rekonlampiran2Obj  extends DaftarObj2{	
+	var $Prefix = 'Rekonlampiran2';
+	var $elCurrPage="HalDefault";
+	var $SHOW_CEK = TRUE;
+	var $TblName = 'Rekonlampiran2'; //daftar
+	var $TblName_Hapus = 'Rekonlampiran2';
+	var $MaxFlush = 10;
+	var $TblStyle = array( 'koptable', 'cetak','cetak'); //berdasar mode
+	var $ColStyle = array( 'GarisDaftar', 'GarisCetak','GarisCetak');
+	var $KeyFields = array('id');//('p','q'); //daftar/hapus
+	var $FieldSum = array();//array('jml_harga');
+	var $SumValue = array();
+	var $FieldSum_Cp1 = array( 14, 13, 13);//berdasar mode
+	var $FieldSum_Cp2 = array( 1, 1, 1);	
+	var $checkbox_rowspan = 2;
+	var $PageTitle = 'Cetak Surat';
+	var $PageIcon = '';
+	var $pagePerHal ='';
+	var $fileNameExcel='Rekonlampiran2.xls';
+	var $Cetak_Judul = 'Cetak Surat';	
+	var $Cetak_Mode=2;
+	var $Cetak_WIDTH = '30cm';
+	var $Cetak_OtherHTMLHead;
+	var $FormName = 'Rekonlampiran2Form';	
+	var $WITH_HAL=FALSE;
+	var $TampilFilterColapse = 0; //0
+	
+	function setPage_OtherScript(){
+		$scriptload = 
+					"<script>
+						$(document).ready(function(){ 
+							".$this->Prefix.".loading();
+						});
+						
+					</script>";
+					
+		return 
+			"<script type='text/javascript' src='js/rekon/".strtolower($this->Prefix).".js' language='JavaScript' ></script>".
+			$scriptload;
+	}
+		
+	function setTitle(){
+		return '';
+	}
+	
+	function setMenuEdit(){		
+		return
+		"";
+	}
+	
+	function setMenuView(){
+		return 
+		"";
+	}
+	
+	function genDaftarOpsi(){
+		global $Ref, $Main;
+		return array('TampilOpt'=>$TampilOpt);
+	}		
+	
+	
+	function setPage_HeaderOther(){
+		return 
+			"";
+	}	
+		
+	function set_selector_other($tipe){
+		global $Main;
+		$cek = ''; $err=''; $content=''; $json=TRUE;
+		$cbid = $_REQUEST[$this->Prefix.'_cb'];
+		$this->form_idplh = $cbid[0];
+		switch($tipe){	
+			case 'cetaklampiran':{		
+				$json= FALSE;
+				$this->cetaklampiran();							
+			break;
+			}
+						
+		 	/*default:{
+				$other = $this->set_selector_other2($tipe);
+				$cek = $other['cek'];
+				$err = $other['err'];
+				$content=$other['content'];
+				$json=$other['json'];
+		 	break;
+		 	}*/
+			
+		 }
+			
+		return	array ('cek'=>$cek, 'err'=>$err, 'content'=>$content, 'json'=>$json);
+    }	
+	
+	function cetaklampiran(){
+		$width='21cm';
+		$height='33cm';
+		$font_size='11';
+		$isi_head ="<title>$Main->Judul</title>
+				<!--<link rel=\"stylesheet\" href=\"css/template_css.css\" type=\"text/css\" />-->
+				<style>
+table.rangkacetak {
+	background-color: #FFFFFF;
+	margin: 0cm;
+	padding: 0px;
+	border: 0px;
+	width: 30cm;
+	border-collapse: collapse;
+	font-family : Arial, Helvetica, sans-serif;
+	
+}
+table.rangkacetak td {
+	font-size:9pt;
+}
+table.cetak {
+	background-color: #FFFFFF;
+	font-family : Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 2px;
+	border: 1px solid;
+	width: 30cm;
+	border-collapse: collapse;
+	color: #000000;
+	font-size : 9pt;
+}
+table.cetak th.th01 {
+	margin: 0px;
+	padding: 5px;
+	height: 10px;
+	border: 1px solid #000000;
+	font-size : 9pt;
+	color: #000000;
+	text-align: center;
+	background-color: #FFFFFF;
+}
+table.cetak tr.row0 {
+	background-color: #EBEBEB;
+	text-align: left;
+	border: 1px solid #000000;
+}
+table.cetak td {
+	font-size:9pt;
+	border: 1px solid #000000;
+	padding:2px 2px 2px 4px;
+}
+table.cetak input {
+	font-family: Arial Narrow;
+	font-size: 10pt;
+}
+				</style>";
+		$isi_body="
+			<table border='0' class='rangkacetak' style='width:100%;' >
+				<tr>
+					 <td ><b><i>Lampiran 2</i></b></td>
+				</tr>				
+			</table>
+			<br>
+			<table border='0' class='rangkacetak' style='width:100%;' >
+				<tr>
+					 <td ><b>Koreksi Nilai Perolehan hasil Audit BPKRI (aset produktif)</b></td>
+				</tr>				
+			</table>			
+			<table border='1' class='cetak' style='width:100%;' >	
+				<tr >
+					<th class='th01' align='center' rowspan='2' width='250'>Hasil Penilaian Menurut KJPP</th>
+					<th class='th01' align='center' rowspan='2' width='100'>Nilai Perolehan</th>
+					<th class='th01' align='center' colspan='2' width='300'>Koreksi hasil rekonsiliasi</th>
+					<th class='th01' align='center' rowspan='2' width='100'>Hasil Koreksi</th>									
+				</tr>
+				<tr>
+					<th class='th01' align='center'>Penambahan</th>
+					<th class='th01' align='center'>Pengurangan</th>
+				<tr>
+				<tr >
+					<td >Tanah</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td >Peralatan dan Mesin</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td >Gedung dan Bangunan</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td >Jalan/Jembatan,Jaringan, dan Instalasi</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td >Aset Tetap Lainnya</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td >Konstruksi dalam Pengerjaan</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td align='right'>Jumlah</td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>					
+				</tr>
+			</table>
+			<br>
+			<table border='0' class='rangkacetak' style='width:100%;' >
+				<tr>
+					 <td ><b>Koreksi Nilai Wajar hasil Audit BPKRI (aset produktif)</b></td>
+				</tr>				
+			</table>		
+			<table border='1' class='cetak' style='width:100%;' >	
+				<tr >
+					<th class='th01' align='center' rowspan='2' width='250'>Hasil Penilaian Menurut KJPP</th>
+					<th class='th01' align='center' rowspan='2' width='100'>Nilai Wajar</th>
+					<th class='th01' align='center' colspan='2' width='300'>Koreksi hasil rekonsiliasi</th>
+					<th class='th01' align='center' rowspan='2' width='100'>Hasil Koreksi</th>									
+				</tr>
+				<tr>
+					<th class='th01' align='center'>Penambahan</th>
+					<th class='th01' align='center'>Pengurangan</th>
+				<tr>
+				<tr >
+					<td >Tanah</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td >Peralatan dan Mesin</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td >Gedung dan Bangunan</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td >Jalan/Jembatan,Jaringan, dan Instalasi</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td >Aset Tetap Lainnya</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td >Konstruksi dalam Pengerjaan</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td align='right'>Jumlah</td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>					
+				</tr>
+			</table>
+			<br>
+			<table border='0' class='rangkacetak' style='width:100%;' >
+				<tr>
+					 <td ><b>Koreksi Nilai Perolehan hasil investigasi(aset tidak produktif)</b></td>
+				</tr>				
+			</table>		
+			<table border='1' class='cetak' style='width:100%;' >	
+				<tr >
+					<th class='th01' align='center' rowspan='2' width='250'>Hasil Penilaian Menurut KJPP</th>
+					<th class='th01' align='center' rowspan='2' width='100'>Nilai Perolehan</th>
+					<th class='th01' align='center' colspan='2' width='300'>Koreksi hasil rekonsiliasi</th>
+					<th class='th01' align='center' rowspan='2' width='100'>Hasil Koreksi</th>									
+				</tr>
+				<tr>
+					<th class='th01' align='center'>Penambahan</th>
+					<th class='th01' align='center'>Pengurangan</th>
+				<tr>
+				<tr >
+					<td >Tanah</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td >Peralatan dan Mesin</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td >Gedung dan Bangunan</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td >Jalan/Jembatan,Jaringan, dan Instalasi</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td >Aset Tetap Lainnya</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td >Konstruksi dalam Pengerjaan</td>
+					<td align='right'></td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'></td>				
+				</tr>
+				<tr >
+					<td align='right'>Jumlah</td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>
+					<td align='right'>-</td>					
+				</tr>
+			</table>
+			<br>
+			<table border='0' class='rangkacetak' style='width:100%;' >
+				<tr>
+					 <td valign='top'>catatan: </td><td>- Aset tetap yang diperoleh pada tahun 2014 dicatat sebesar nilai perolehan,<br>
+					 - Aset tetap yang diperoleh pada tahun 2014 dicatat sebesar nilai wajar,jika tidak memungkinkan maka nilai aset tetap didasarkan pada nilai perolehan</td>
+				</td>				
+				</tr>				
+			</table>	
+				";
+		$isi="<html>
+				<head>
+					$isi_head
+				</head>
+				<body>
+					$isi_body
+				</body>
+			  </html>
+				";			
+		
+		echo "<div style='width:$width;height:$height;'>$isi</div>";
+		//echo "<div style='width:$width;height:$height;'>$isi</div>";
+	}
+		
+	/*function setCetak_Header($Mode=''){
+		global $Main, $HTTP_COOKIE_VARS;
+		return
+			$Main->kopLaporan= 
+					"<table border='0' class='rangkacetak' style='width:100%;'>
+						<tr>
+						 <td>
+						 	<span style='font-size:12;'><b>KEMENTRIAN ENERGI DAN SUMBERDAYA MINERAL</b></span><br>
+						 	<span style='font-size:14;'><b>BADAN GEOLOGI</b></span><br>
+						 	<span style='font-size:14;'><b>SEKRETARIAT BADAN GEOLOGI</b></span><br>
+							<span style='font-size:14;'>Jl. Diponegoro No.57 Bandung
+						 </td>
+						 <td width=43%>	
+						 	<span style='font-size:8;'>LAMPIRAN I</span><br>
+						 	<div style='text-align:justify;text-justify:auto;'>
+						    	<span style='font-size:8;'>PERATURAN MENTERI KEUANGAN REPUBLIK INDONESIA NOMOR 113/PMK.05/2012 TENTANG PERJALAN DINAS JABATAN DALAM NEGERI BAGI PEJABAT NEGARA ,PEGAWAI NEGERI DAN PEGAWAI TIDAK TETAP</span>
+						 	</div>
+						 </td>
+						</tr>
+					</table>";
+	}  */	
+			
+}
+$Rekonlampiran2 = new Rekonlampiran2Obj();
+?>

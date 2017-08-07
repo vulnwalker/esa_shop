@@ -1,0 +1,1 @@
+<?phpfunction table_get_value($sqry, $fieldname){	$jml='';	//echo 'table_get_value'.$sqry.'<br>';	$qry = mysql_query($sqry);	while($row = mysql_fetch_array($qry)){		$jml=$row[$fieldname]	;		}		return $jml;	}function table_get_rec($sqry){	$jml=0;	$qry = mysql_query($sqry);	$row = mysql_fetch_array($qry);		return $row;}?>

@@ -1,0 +1,1 @@
+<?php//include('var.php');header("Location: http://atisisbada.net/");//header("Location: $Main->WEB_LOCATION");?>

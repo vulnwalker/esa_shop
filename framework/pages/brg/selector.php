@@ -1,0 +1,1 @@
+<?php$SPg = isset($HTTP_GET_VARS["SPg"])?$HTTP_GET_VARS["SPg"]:"";//$MsgReadOnly = switch($SPg){	case "01": include("list_dokum.php");break;	case "02": include("list_gbr.php");break;}?>

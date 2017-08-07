@@ -1,0 +1,23 @@
+/*
+.button_std {
+	height:24px;
+	padding-left:10;
+	padding-right:10;
+}
+*/
+
+.abarang{
+	color:black;
+}
+
+.abarang:hover{
+	color: red;
+}
+
+.fontColorSel {
+	color: rgb(51, 51, 51);
+}
+
+.fontColorSel:hover {
+	color:#FF00FF;
+}

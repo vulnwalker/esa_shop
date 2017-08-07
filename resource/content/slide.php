@@ -1,13 +1,13 @@
 <div class="col" id="slide">
 	<div class="col-wd-12">
-		<div align="center" class="logotext"><i class="fa fa-opencart"></i> <b>ESA</b>-SHOP</div>
+		<div align="center" class="logotext"><i class="fa fa-opencart"></i> <b>Huzaini</b> Fashion</div>
 			<div align="center" class="textslide">
 				<span>
-					<div>Belanja Mudah</div>
-					<div>Harganya Murah</div>
-					<div>Banyak Discount</div>
-					<div>Free Ongkir</div>
-					<div>Pemesanan cepat</div>
+					<div class="col-wd-12">Belanja Mudah</div>
+					<div class="col-wd-12">Harganya Murah</div>
+					<div class="col-wd-12">Banyak Discount</div>
+					<div class="col-wd-12">Free Ongkir</div>
+					<div class="col-wd-12">Pemesanan cepat</div>
 				</div>
 			</div>
 	<div class="col-wd-12">

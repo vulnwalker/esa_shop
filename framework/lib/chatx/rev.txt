@@ -1,0 +1,54 @@
+/*
+- cek user online:
+	- kirim request ke cek_user_ol.php  
+	- cek_user_ol.php mengirim newdaftarol (daftar online baru)
+- set inisial daftaroff = daftarol di client
+- update daftar ol -> utk semua newdaftarol cek :
+	- jika newdaftarol[i] tidak ada di daftarol, tambahkan ke daftarol
+	- jika ada, hapus dari daftarof (user masih online) 
+- sisa di daftaroff adalah user yang sudah off :
+	- hapus di daftarol
+	- jika boxnya ada, kasih info user telah off
+
+- cek pesan:
+	- kirim request ke cek_pesan.php
+	- ambil pesan utk usr1 dgn stat=0 (blm dikirm) -> newdaftarpesan
+- utk semua newdaftarpesan -> proses pesan :
+	- jika belum ada: tambah list , tab & box
+	- masukan pesan ke box sesuai id pengirim
+	- simpan idpesan di daftaridpesanditerima
+- set telah sukses diterima: 
+	- kirim daftaridpesanditerima ke sukses_terkirim.php
+	- update table.stat = 1 (sukses diterima)
+- settimeout(2000) kembali ke cek user
+
+
+- cek pesan:
+	- request pesan -> loading
+	- sukses request
+	- jika tab user aktif -> 		
+		- masukan pesan -> catat id pesan di idpesanterakhir
+		- set telah sukses diterima sampai id pesan terakhir dari usr2
+	- jika tab tidak aktif -> tandai ada pesan baru
+	
+	
+- jika tab user diaktifkan
+
+	
+- kirim pesan
+	- request kirim pesan -> to(usr2), isi
+	- cek usr2 online
+	 	- jika online: 
+			- tulis ke table
+			- kirim pesan err='';
+		- jika tidak: 
+			- kirim pesan err = user offline
+	- get request:
+		- cek error
+			- jika error -> tulis pesan error
+			
+- biar ga, flood button send aktif setelah sukses terkirim + freese 2000 
+
+- ukuran photo 750 * 563, 500kb
+
+*/

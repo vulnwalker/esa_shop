@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+ <Document>
+		
+	<Style id="normalState"> 		
+		<LineStyle>
+      		<color>73FF0000</color>
+      		<width>2</width>
+    	</LineStyle>		
+    	<PolyStyle>
+      		<color>73FF0000</color>
+      		<fill>0</fill>
+      		<outline>1</outline>
+    	</PolyStyle>
+	</Style>
+	<Style id="pointStyle1"> 
+		<IconStyle>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/pal4/icon28.png</href>
+        </Icon>
+      	</IconStyle>		
+	</Style>
+
+	<Placemark id='1'>
+		<name>nama</name>
+		<description></description>
+		<styleUrl>#pointStyle1</styleUrl>		    			
+    	<Point>
+      		<coordinates>107.618332,-6.90207,0</coordinates>
+    	</Point>
+  	</Placemark>			
+			
+	<Placemark id='2'>
+		<name>nama</name>
+		<description>desk</description>
+		<styleUrl>#normalState</styleUrl>
+		<Polygon>
+      		<outerBoundaryIs>
+        		<LinearRing>
+          			<tessellate>1</tessellate>
+          			<coordinates>
+						  107.617050,-6.901437
+            107.619644,-6.901384
+            107.619713,-6.901642
+            107.619858,-6.901887
+            107.620216,-6.902175
+            107.620399,-6.902218
+            107.620598,-6.902356
+            107.620941,-6.902654
+            107.620285,-6.903279
+            107.620163,-6.903229
+            107.619652,-6.903546
+            107.617699,-6.903578
+            107.617371,-6.903410
+            107.617111,-6.903098
+            107.617050,-6.901437
+          
+					</coordinates>
+        		</LinearRing>
+      		</outerBoundaryIs>
+    	</Polygon>		
+	</Placemark>
+	
+	</Document>
+</kml>

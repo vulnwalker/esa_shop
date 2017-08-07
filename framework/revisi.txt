@@ -1,0 +1,1475 @@
+25/11/2013
+ubah database
+kib_a,kib_c,kib_d,kib_f
+- field alamat_c,kota
+view_buku_induk2
+view_kib_a
+view_kib_c
+view_kib_d2
+view_kib_f2
+
+
+/js/wilayah.js
+/js/skpd.js
+/pages.php
+/common/fnkotakec.php
+/common/fnpenatausaha.php
+/pages/05/listbi.php
+/pages/05/entryidi_lama.php
+/pages/cetak/brg_cetak2.php
+
+
+
+28/11/2013
+ubah database
+v_pemelihara,v_pengaman
+
+- tambah field e1
+
+/pages/07/listpelihara.php
+/pages/07/listpengaman.php
+/common/fnpelihara.php
+/common/fnpengaman.php
+
+26/03/2014
+- sub modul penghapusan sebagian
+- kondisi barang tidak ada masuk usulan hapus
+
+/commom/var.php
+/commom/fnfile.php
+/commom/fnpenatausaha.php
+/commom/fnhapussebagian.php
+/common/fnusulanhapusba.php
+/common/fnusulanhapussk.php
+/common/fnusulanhapus.php
+/pages/navatas.php
+/pages/cetak/listMutasi_cetak.php
+/pages/cetak/rekap_mutasi_cetak.php
+/pages/cetak/rekap_mutasi_xls.php
+/pages/cetak/selector.php
+/pages/09/listhapussebagian.php
+
+/pages/09/selector.php
+/js/penatausaha.js
+/ajaxprs.php
+
+
+database
+tambah penghapusan_sebagian,v_hapus_sebagian,v_hapussebagian_tot
+v2_gantirugi_hapussebagian,v2_penghapusan_hapussebagian,v2_pidahtangan_hapussebagian,v2_mutasi_hapussebagian
+ubah view_kib_a2_total .... view_kib_f2_total,view_buku_induk_total
+
+10/04/2014
+fungsi cutoff
+tambah user level
+common/fnuser.php 
+-edit Function CekLogin()
+common/fnpelihara.php
+common/fnpengaman.php
+common/fnfile.php
+-tambah function Penatausahaan_CekdataCutoff()
+-edit function Penatausahaan_Proses()
+common/fnpenghapusan.php
+-tambah function Penghapusan_CekdataCutoff()
+-edit function Penghapusan_Proses()
+
+setcookies TahunAnggaran
+common/fnuser.php Function UserLogin()
+update rkb/rkpb/dkb/dkpb
+common/fnrkb.php,fnrkpb.php,fndkb.php,dkpb.php
+update dpb/dppb
+
+sensus
+common/fnfile.php function PrintTTD_SensusKK(),function getTahunSensus()
+images/checkbox.png
+sp_sensus_scan
+
+25/014/2014
+pages/navatas.php
+common/fnfile.php
+pages/05/selector.php
+pages/05/rekap_bi_keu.php
+pages/cetak/rekap_bi_cetak_keu.php
+pages/cetak/rekap_bi_cetak_keu_xls.php
+pages/cetak/rekap_bi_xls.php
+pages/cetak/selector.php
+*database
+view_buku_induk,view_buku_induk2,v_pengaman,v_pemelihara,v_penghapusan_bi
+v1_gantirugi,v1_pindahtangan
+v2_gantirugi_hapussebagian,v2_gantirugi_pelihara,v2_gantirugi_pengaman,v2_mutasi_hapussebagian,v2_mutasi_pelihara,v2_mutasi_pengaman,v2_penghapusan_hapussebagian,v2_penghapusan_pelihara,v2_penghapusan_pengaman,v2_pindahtangan_hapussebagian,v2_pindahtangan_pelihara,v2_pindahtangan_pengaman
+
+28/04/2014
+v1_pindahtangan
+tabel pindahtangan
+/pages/10/listpindahtangan.php
+/common/fnpindahtangan.php
+/common/fnfile.php
+
+
+10/05/2014
+triger sensus -> sensus_bef_del
+fnsensus.php
+fnsensusprogress.php
+fnsensushasil.php
+fnpenatausahaan.php
+sensus.js
+
+12/05/2014
+/pages/ref/inputrefbarang.php
+/pages/ref/inputrefskpd.php
+/pages/cetak/selector.php
+/pages/cetak/ref_barang_cetak.php
+/pages/cetak/ref_skpd_cetak.php
+
+
+26/05/2014
+view_kib_x_total harus diubah
+id_bukuinduk jadi idbi_awal
+
+16/06/2014
+caridkb2.php
+
+04/07/2014
+Rekap perbandingan bpk atisisbada
+viewer.php
+/common/fnfile.php
+- function getRekapBanding2
+- function Banding
+/viewer/viewer.html
+/viewer/view_banding.php
+/viewer/view_rekap.php
+
+04/08/2014
+table barang_tidak_tercatat +kota
+/common/fnsensustidaktercatat.php
+
+9/15/2014
+insert_bi_kib.php
+penambahan kib_g / aset lainnya
+kibg,view_kib_g,view_kib_g_total
+- fnfile: Penatausahaan_GetListDet()
+- fnpenatausahaan: function getTableName,function genList()
+
+14/10/2014
+database :kib_g,view_kib_g,view_kib_g_total
+common/fnfile.php
+common/fnpenatausahaan.php
+pages/01/caribarang2.php
+pages/05/entryid_lama.php
+pages/navatas.php
+js/penatausaha.js
+pages/cetak/listbi_cetak.php
+viewer/viwerfn.php
+
+17/10/2014
+- inta extra
+database buku_induk tambah field staset,verifikasi
+view_buku_induk,view_buku_induk2,
+- tampil seksi di penghapusan
+/common/fnfile.php function tampilNmSubUnit3(),  function createEntryTgl()
+/common/fnpenghapusan.php
+
+14/11/2014
+-- pemanfaatan 
+fnpenatausahaan.php -pnlpemanfaatan
+fnpemanfaatan.php
+-- teks gubernur
+fnpenghapusan.php
+17/11/2014
+common/fnfile.php
+/pages/05/barangProses.php
+/pages/05/entryid_lama.php
+/common/vars.php
+
+09/09/2015 -------ahmad
+folder API
+api.php
+
+16/09/2015 -------ahmad
+/API/daftarbi.php
+/API/default_gambar.php
+api.php
+
+21/09/2015 -------ahmad
+/API/daftarbi.php
+
+23/09/2015 -------ahmad
+/API/daftarbi.php
+/API/default_gambar.php
+
+25/09/2015 -------ahmad
+/pages/base_login.php
+/downloads2011/ATISISBADA.apk
+
+
+2015/11/2 r
+> koreksi di penatausahaan: 
+- ajaxprs.php : Koreksi2...
+- js/koreksi.js
+- common/fnkoreksi2.php
+
+
+> get status aset
+- common/fnstatusaset.php
+- common/fnfile.php
+
+//2015/11/3 r
+> cetak rekap neraca dan excel rekap neraca
+common/fnpembukuan_2_ajx.php
+js/pembukuan2ajx.js
+js/daftarobj.js : replaceall()
+
+> staset otomatis
+common/fnfile.php
+
+
+//2015/11/17 r
+> rekap penyusutan
+- common/fnrekap_penyusutan.php
+- js/rekappenyusutan.js
+- pages.php pg=RekapPenyusutan 
+- pages/navatas.php
+
+//20151205 ru
+> bast, spk/kontrak, penggunaan
+- common/fnfile.php
+- common/fnpenatausaha.php
+- pages/05/entryidi_lama.php
+db:
+- view_buku_induk, view_buku_induk2, view_bukuinduk2_toral
+- view_kib_a, view_kib_a2, view_kib_a2_total dst
+
+//2015/12/07
+insert_bi_kibv3.php
+
+
+//2015-11-16 r
+> penyustan mode 2 : dihitung tiap tahun, utk sem dibagi2
+- common/fnfile.php
+- common/fnpenatausah.php
+- common/vars_def.php : $Main->SUSUT_MODE=2;
+
+//2015-12-05 r -------------------------------------------------------------------------------
+> nobast ,no spk, penggunaan
+- common/fnfile.php
+- common/fnpenatausaha.php
+- pages/05/entryidi_lama.php
+- update view buku induk
+alter VIEW  `view_buku_induk` AS select `aa`.`id` AS `id`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`e` AS `e`,`aa`.`f` AS `f`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`gambar` AS `gambar`,`aa`.`dokumen` AS `dokumen`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`tahun` AS `tahun`,concat(`aa`.`f`,'.',`aa`.`g`,'.',`aa`.`h`,'.',`aa`.`i`,'.',`aa`.`j`) AS `id_barang`,`bb`.`nm_barang` AS `nm_barang`,`aa`.`dokumen_file` AS `dokumen_file`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`tgl_sensus` AS `tgl_sensus`,if(((`aa`.`idawal` = '') or isnull(`aa`.`idawal`)),`aa`.`id`,`aa`.`idawal`) AS `idawal`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`aa`.`idall2` AS `idall2`,`aa`.`e1` AS `e1`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,if((((`aa`.`f` = '02') or (`aa`.`f` = '03')) and (`aa`.`kondisi` = 3)),0,if((`aa`.`kondisi` <= 3),1,2)) AS `aset_tetap`,`aa`.`staset` AS `staset`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`id_lama` AS `id_lama`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`stusul` AS `stusul`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain` from ( `buku_induk` `aa` left join  `ref_barang` `bb` on(((`aa`.`f` = `bb`.`f`) and (`aa`.`g` = `bb`.`g`) and (`aa`.`h` = `bb`.`h`) and (`aa`.`i` = `bb`.`i`) and (`aa`.`j` = `bb`.`j`))));
+alter  VIEW  `view_buku_induk2` AS select `aa`.`id` AS `id`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`e` AS `e`,`aa`.`f` AS `f`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`gambar` AS `gambar`,`aa`.`dokumen` AS `dokumen`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`tahun` AS `tahun`,concat(`aa`.`f`,'.',`aa`.`g`,'.',`aa`.`h`,'.',`aa`.`i`,'.',`aa`.`j`) AS `id_barang`,`bid`.`nm_skpd` AS `nmbidang`,`opd`.`nm_skpd` AS `nmopd`,`aa`.`dokumen_file` AS `dokumen_file`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,if(((`aa`.`idawal` = '') or isnull(`aa`.`idawal`)),`aa`.`id`,`aa`.`idawal`) AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`bb`.`nm_barang` AS `nm_barang`,`aa`.`idall2` AS `idall2`,`aa`.`e1` AS `e1`,`unt`.`nm_skpd` AS `nmunit`,`cc`.`nm_skpd` AS `nmseksi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,if((((`aa`.`f` = '02') or (`aa`.`f` = '03')) and (`aa`.`kondisi` = 3)),0,if((`aa`.`kondisi` <= 3),1,2)) AS `aset_tetap`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`stusul` AS `stusul`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from ((((( `buku_induk` `aa` left join  `ref_skpd` `bid` on(((`aa`.`c` = `bid`.`c`) and (`bid`.`d` = '00')))) left join  `ref_skpd` `opd` on(((`aa`.`c` = `opd`.`c`) and (`aa`.`d` = `opd`.`d`) and (`opd`.`e` = '00') and (`opd`.`d` <> '00')))) left join  `ref_skpd` `unt` on(((`aa`.`c` = `unt`.`c`) and (`aa`.`d` = `unt`.`d`) and (`aa`.`e` = `unt`.`e`) and ((`unt`.`e1` = '00') or (`unt`.`e1` = '000')) and (`unt`.`e` <> '00')))) left join  `ref_skpd` `cc` on(((`aa`.`c` = `cc`.`c`) and (`aa`.`d` = `cc`.`d`) and (`aa`.`e` = `cc`.`e`) and (`aa`.`e1` = `cc`.`e1`) and (`cc`.`e1` <> '00') and (`cc`.`e1` <> '000')))) left join  `ref_barang` `bb` on(((`aa`.`f` = `bb`.`f`) and (`aa`.`g` = `bb`.`g`) and (`aa`.`h` = `bb`.`h`) and (`aa`.`i` = `bb`.`i`) and (`aa`.`j` = `bb`.`j`))));
+alter  VIEW  `view_buku_induk2_total` AS select `bb`.`tot_pelihara` AS `tot_pelihara`,`cc`.`tot_pengaman` AS `tot_pengaman`,`dd`.`tot_hapussebagian` AS `tot_hapussebagian`,`aa`.`id` AS `id`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`e` AS `e`,`aa`.`e1` AS `e1`,`aa`.`f` AS `f`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`gambar` AS `gambar`,`aa`.`dokumen` AS `dokumen`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`tahun` AS `tahun`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`dokumen_file` AS `dokumen_file`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`aa`.`idall2` AS `idall2`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`stusul` AS `stusul`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`thn_akun` AS `thn_akun`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf` from ((( `view_buku_induk2` `aa` left join  `v_pemelihara_tot` `bb` on((`aa`.`idawal` = `bb`.`idbi_awal`))) left join  `v_pengaman_tot` `cc` on((`aa`.`idawal` = `cc`.`idbi_awal`))) left join  `v_hapussebagian_tot` `dd` on((`aa`.`idawal` = `dd`.`idbi_awal`)));
+alter  VIEW  `view_kib_a` AS select `bb`.`luas` AS `luas`,`bb`.`alamat` AS `alamat`,`bb`.`alamat_a` AS `alamat_a`,`bb`.`alamat_b` AS `alamat_b`,`bb`.`alamat_kel` AS `alamat_kel`,`bb`.`alamat_kec` AS `alamat_kec`,`bb`.`koordinat_gps` AS `koordinat_gps`,`bb`.`koord_bidang` AS `koord_bidang`,`bb`.`status_hak` AS `status_hak`,`bb`.`bersertifikat` AS `bersertifikat`,`bb`.`sertifikat_tgl` AS `sertifikat_tgl`,`bb`.`sertifikat_no` AS `sertifikat_no`,`bb`.`ket` AS `ket`,`bb`.`tahun` AS `tahun`,`aa`.`id` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`cc`.`nm_wilayah` AS `alamat_kota`,`bb`.`id` AS `id`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`idall2` AS `idall2`,`aa`.`e1` AS `e1`,`bb`.`alamat_c` AS `alamat_c`,`dd`.`nm_wilayah` AS `alamat_kec1`,`bb`.`kota` AS `kota`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`stusul` AS `stusul`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from ((( `view_buku_induk2` `aa` left join  `kib_a` `bb` on(((`aa`.`a1` = `bb`.`a1`) and (`aa`.`e1` = `bb`.`e1`) and (`aa`.`a` = `bb`.`a`) and (`aa`.`b` = `bb`.`b`) and (`aa`.`c` = `bb`.`c`) and (`aa`.`d` = `bb`.`d`) and (`aa`.`e` = `bb`.`e`) and (`aa`.`f` = `bb`.`f`) and (`aa`.`g` = `bb`.`g`) and (`aa`.`h` = `bb`.`h`) and (`aa`.`i` = `bb`.`i`) and (`aa`.`j` = `bb`.`j`) and (`aa`.`thn_perolehan` = `bb`.`tahun`) and (`aa`.`noreg` = `bb`.`noreg`)))) left join  `ref_kotakec` `cc` on(((`bb`.`alamat_b` = `cc`.`kd_kota`) and (`cc`.`kd_kec` = '0')))) left join  `ref_kotakec` `dd` on(((`bb`.`alamat_b` = `dd`.`kd_kota`) and (`bb`.`alamat_c` = `dd`.`kd_kec`) and (`dd`.`kd_kec` <> '0')))) where (`aa`.`f` = '01');
+alter  VIEW  `view_kib_a2` AS select `bb`.`tot_pelihara` AS `tot_pelihara`,`cc`.`tot_pengaman` AS `tot_pengaman`,0 AS `tot_hapussebagian`,`aa`.`luas` AS `luas`,`aa`.`alamat` AS `alamat`,`aa`.`alamat_a` AS `alamat_a`,`aa`.`alamat_b` AS `alamat_b`,`aa`.`alamat_kel` AS `alamat_kel`,`aa`.`alamat_kec` AS `alamat_kec`,`aa`.`koordinat_gps` AS `koordinat_gps`,`aa`.`koord_bidang` AS `koord_bidang`,`aa`.`status_hak` AS `status_hak`,`aa`.`bersertifikat` AS `bersertifikat`,`aa`.`sertifikat_tgl` AS `sertifikat_tgl`,`aa`.`sertifikat_no` AS `sertifikat_no`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`ket` AS `ket`,`aa`.`tahun` AS `tahun`,`aa`.`idbi` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`aa`.`alamat_kota` AS `alamat_kota`,`aa`.`id` AS `id`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`idall2` AS `idall2`,`aa`.`e1` AS `e1`,`aa`.`alamat_c` AS `alamat_c`,`aa`.`alamat_kec1` AS `alamat_kec1`,`aa`.`kota` AS `kota`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`stusul` AS `stusul`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke` from (( `view_kib_a` `aa` left join  `v_pemelihara_tot_` `bb` on((`aa`.`idbi` = `bb`.`id_bukuinduk`))) left join  `v_pengaman_tot_` `cc` on((`aa`.`idbi` = `cc`.`id_bukuinduk`)));
+alter  VIEW  `view_kib_a2_total` AS select `bb`.`tot_pelihara` AS `tot_pelihara`,`cc`.`tot_pengaman` AS `tot_pengaman`,0 AS `tot_hapussebagian`,`aa`.`luas` AS `luas`,`aa`.`alamat` AS `alamat`,`aa`.`alamat_a` AS `alamat_a`,`aa`.`alamat_b` AS `alamat_b`,`aa`.`alamat_kel` AS `alamat_kel`,`aa`.`alamat_kec` AS `alamat_kec`,`aa`.`koordinat_gps` AS `koordinat_gps`,`aa`.`koord_bidang` AS `koord_bidang`,`aa`.`status_hak` AS `status_hak`,`aa`.`bersertifikat` AS `bersertifikat`,`aa`.`sertifikat_tgl` AS `sertifikat_tgl`,`aa`.`sertifikat_no` AS `sertifikat_no`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`ket` AS `ket`,`aa`.`tahun` AS `tahun`,`aa`.`idbi` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`aa`.`alamat_kota` AS `alamat_kota`,`aa`.`id` AS `id`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`idall2` AS `idall2`,`aa`.`e1` AS `e1`,`aa`.`alamat_c` AS `alamat_c`,`aa`.`alamat_kec1` AS `alamat_kec1`,`aa`.`kota` AS `kota`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`stusul` AS `stusul`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from (( `view_kib_a` `aa` left join  `v_pemelihara_tot_` `bb` on((`aa`.`idbi` = `bb`.`id_bukuinduk`))) left join  `v_pengaman_tot_` `cc` on((`aa`.`idbi` = `cc`.`id_bukuinduk`)));
+alter  VIEW `view_kib_b` AS select `aa`.`id` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`bb`.`merk` AS `merk`,`bb`.`ukuran` AS `ukuran`,`bb`.`bahan` AS `bahan`,`bb`.`no_pabrik` AS `no_pabrik`,`bb`.`no_rangka` AS `no_rangka`,`bb`.`no_mesin` AS `no_mesin`,`bb`.`no_polisi` AS `no_polisi`,`bb`.`ket` AS `ket`,`bb`.`tahun` AS `tahun`,`aa`.`nm_barang` AS `nm_barang`,`bb`.`id` AS `id`,`aa`.`idall2` AS `idall2`,`bb`.`no_bpkb` AS `no_bpkb`,`aa`.`e1` AS `e1`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`stusul` AS `stusul`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from (`view_buku_induk2` `aa` left join `kib_b` `bb` on(((`aa`.`a1` = `bb`.`a1`) and (`aa`.`a` = `bb`.`a`) and (`aa`.`b` = `bb`.`b`) and (`aa`.`c` = `bb`.`c`) and (`aa`.`d` = `bb`.`d`) and (`aa`.`e1` = `bb`.`e1`) and (`aa`.`e` = `bb`.`e`) and (`aa`.`f` = `bb`.`f`) and (`aa`.`g` = `bb`.`g`) and (`aa`.`h` = `bb`.`h`) and (`aa`.`i` = `bb`.`i`) and (`aa`.`j` = `bb`.`j`) and (`aa`.`thn_perolehan` = `bb`.`tahun`) and (`aa`.`noreg` = `bb`.`noreg`)))) where (`aa`.`f` = '02');
+alter  VIEW `view_kib_b2` AS select `aa`.`id` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`bb`.`merk` AS `merk`,`bb`.`ukuran` AS `ukuran`,`bb`.`bahan` AS `bahan`,`bb`.`no_pabrik` AS `no_pabrik`,`bb`.`no_rangka` AS `no_rangka`,`bb`.`no_mesin` AS `no_mesin`,`bb`.`no_polisi` AS `no_polisi`,`bb`.`no_bpkb` AS `no_bpkb`,`bb`.`ket` AS `ket`,`bb`.`tahun` AS `tahun`,`aa`.`nm_barang` AS `nm_barang`,`bb`.`id` AS `id`,`aa`.`idall2` AS `idall2`,`aa`.`e1` AS `e1`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`aset_tetap` AS `aset_tetap`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`stusul` AS `stusul`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from (`view_buku_induk2` `aa` left join `kib_b` `bb` on(((`aa`.`a1` = `bb`.`a1`) and (`aa`.`e1` = `bb`.`e1`) and (`aa`.`a` = `bb`.`a`) and (`aa`.`b` = `bb`.`b`) and (`aa`.`c` = `bb`.`c`) and (`aa`.`d` = `bb`.`d`) and (`aa`.`e` = `bb`.`e`) and (`aa`.`f` = `bb`.`f`) and (`aa`.`g` = `bb`.`g`) and (`aa`.`h` = `bb`.`h`) and (`aa`.`i` = `bb`.`i`) and (`aa`.`j` = `bb`.`j`) and (`aa`.`thn_perolehan` = `bb`.`tahun`) and (`aa`.`noreg` = `bb`.`noreg`)))) where (`aa`.`f` = '02');
+alter  VIEW `view_kib_b2_total` AS select `aa`.`e1` AS `e1`,`cc`.`tot_pengaman` AS `tot_pengaman`,`bb`.`tot_pelihara` AS `tot_pelihara`,0 AS `tot_hapussebagian`,`aa`.`idbi` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`aa`.`merk` AS `merk`,`aa`.`ukuran` AS `ukuran`,`aa`.`bahan` AS `bahan`,`aa`.`no_pabrik` AS `no_pabrik`,`aa`.`no_rangka` AS `no_rangka`,`aa`.`no_mesin` AS `no_mesin`,`aa`.`no_polisi` AS `no_polisi`,`aa`.`no_bpkb` AS `no_bpkb`,`aa`.`ket` AS `ket`,`aa`.`tahun` AS `tahun`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`id` AS `id`,`aa`.`idall2` AS `idall2`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`aset_tetap` AS `aset_tetap`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`stusul` AS `stusul`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from ((`view_kib_b2` `aa` left join `v_pemelihara_tot_` `bb` on((`aa`.`idbi` = `bb`.`id_bukuinduk`))) left join `v_pengaman_tot_` `cc` on((`aa`.`idbi` = `cc`.`id_bukuinduk`)));
+alter  VIEW  `view_kib_c` AS select `aa`.`id` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`e1` AS `e1`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`bb`.`id` AS `id`,`bb`.`kondisi_bangunan` AS `kondisi_bangunan`,`bb`.`konstruksi_tingkat` AS `konstruksi_tingkat`,`bb`.`konstruksi_beton` AS `konstruksi_beton`,`bb`.`luas_lantai` AS `luas_lantai`,`bb`.`alamat` AS `alamat`,`bb`.`alamat_a` AS `alamat_a`,`bb`.`alamat_b` AS `alamat_b`,`bb`.`alamat_kel` AS `alamat_kel`,`bb`.`alamat_kec` AS `alamat_kec`,`bb`.`koordinat_gps` AS `koordinat_gps`,`bb`.`koord_bidang` AS `koord_bidang`,`bb`.`dokumen_tgl` AS `dokumen_tgl`,`bb`.`dokumen_no` AS `dokumen_no`,`bb`.`luas` AS `luas`,`bb`.`status_tanah` AS `status_tanah`,`bb`.`kode_tanah` AS `kode_tanah`,`bb`.`ket` AS `ket`,`bb`.`kode_loktanah` AS `kode_loktanah`,`aa`.`nm_barang` AS `nm_barang`,`bb`.`tahun` AS `tahun`,`bb`.`kondisi` AS `kondisi_kibc`,`aa`.`idall2` AS `idall2`,`bb`.`alamat_c` AS `alamat_c`,`bb`.`kota` AS `kota`,`ee`.`nm_wilayah` AS `alamat_kec1`,`cc`.`nm_wilayah` AS `alamat_kota`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`aset_tetap` AS `aset_tetap`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`stusul` AS `stusul`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun`,`aa`.`jml_gambar` AS `jml_gambar` from ((( `view_buku_induk2` `aa` left join  `kib_c` `bb` on(((`aa`.`a1` = `bb`.`a1`) and (`aa`.`a` = `bb`.`a`) and (`aa`.`b` = `bb`.`b`) and (`aa`.`c` = `bb`.`c`) and (`aa`.`d` = `bb`.`d`) and (`aa`.`e` = `bb`.`e`) and (`aa`.`f` = `bb`.`f`) and (`aa`.`g` = `bb`.`g`) and (`aa`.`h` = `bb`.`h`) and (`aa`.`i` = `bb`.`i`) and (`aa`.`j` = `bb`.`j`) and (`aa`.`thn_perolehan` = `bb`.`tahun`) and (`aa`.`noreg` = `bb`.`noreg`) and (`aa`.`e1` = `bb`.`e1`)))) left join  `ref_kotakec` `cc` on(((`bb`.`alamat_b` = `cc`.`kd_kota`) and (`cc`.`kd_kec` = '0')))) left join  `ref_kotakec` `ee` on(((`bb`.`alamat_b` = `ee`.`kd_kota`) and (`bb`.`alamat_c` = `ee`.`kd_kec`) and (`ee`.`kd_kota` <> '0')))) where (`aa`.`f` = '03');
+alter  VIEW  `view_kib_c2` AS select `aa`.`id` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`e1` AS `e1`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`bb`.`id` AS `id`,`bb`.`kondisi_bangunan` AS `kondisi_bangunan`,`bb`.`konstruksi_tingkat` AS `konstruksi_tingkat`,`bb`.`konstruksi_beton` AS `konstruksi_beton`,`bb`.`luas_lantai` AS `luas_lantai`,`bb`.`alamat` AS `alamat`,`bb`.`alamat_a` AS `alamat_a`,`bb`.`alamat_b` AS `alamat_b`,`bb`.`alamat_kel` AS `alamat_kel`,`bb`.`alamat_kec` AS `alamat_kec`,`bb`.`koordinat_gps` AS `koordinat_gps`,`bb`.`koord_bidang` AS `koord_bidang`,`bb`.`dokumen_tgl` AS `dokumen_tgl`,`bb`.`dokumen_no` AS `dokumen_no`,`bb`.`luas` AS `luas`,`bb`.`status_tanah` AS `status_tanah`,`bb`.`kode_tanah` AS `kode_tanah`,`bb`.`ket` AS `ket`,`bb`.`kode_loktanah` AS `kode_loktanah`,`dd`.`jml_gambar` AS `jml_gambar`,`aa`.`nm_barang` AS `nm_barang`,`bb`.`tahun` AS `tahun`,`bb`.`kondisi` AS `kondisi_kibc`,`aa`.`idall2` AS `idall2`,`bb`.`alamat_c` AS `alamat_c`,`bb`.`kota` AS `kota`,`ee`.`nm_wilayah` AS `alamat_kec1`,`cc`.`nm_wilayah` AS `alamat_kota`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`aset_tetap` AS `aset_tetap`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`stusul` AS `stusul`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from (((( `view_buku_induk2` `aa` left join  `kib_c` `bb` on(((`aa`.`a1` = `bb`.`a1`) and (`aa`.`a` = `bb`.`a`) and (`aa`.`b` = `bb`.`b`) and (`aa`.`c` = `bb`.`c`) and (`aa`.`d` = `bb`.`d`) and (`aa`.`e` = `bb`.`e`) and (`aa`.`f` = `bb`.`f`) and (`aa`.`g` = `bb`.`g`) and (`aa`.`h` = `bb`.`h`) and (`aa`.`i` = `bb`.`i`) and (`aa`.`j` = `bb`.`j`) and (`aa`.`thn_perolehan` = `bb`.`tahun`) and (`aa`.`noreg` = `bb`.`noreg`) and (`aa`.`e1` = `bb`.`e1`)))) left join  `v_jmlgambar_bybi` `dd` on((`aa`.`idawal` = `dd`.`idbi`))) left join  `ref_kotakec` `cc` on(((`bb`.`alamat_b` = `cc`.`kd_kota`) and (`cc`.`kd_kec` = '0')))) left join  `ref_kotakec` `ee` on(((`bb`.`alamat_b` = `ee`.`kd_kota`) and (`bb`.`alamat_c` = `ee`.`kd_kec`) and (`ee`.`kd_kota` <> '0')))) where (`aa`.`f` = '03');
+alter  VIEW  `view_kib_c2_total` AS select `aa`.`e1` AS `e1`,`bb`.`tot_pelihara` AS `tot_pelihara`,`cc`.`tot_pengaman` AS `tot_pengaman`,`dd`.`tot_hapussebagian` AS `tot_hapussebagian`,`aa`.`idbi` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`aa`.`alamat_kota` AS `alamat_kota`,`aa`.`id` AS `id`,`aa`.`kondisi_bangunan` AS `kondisi_bangunan`,`aa`.`konstruksi_tingkat` AS `konstruksi_tingkat`,`aa`.`konstruksi_beton` AS `konstruksi_beton`,`aa`.`luas_lantai` AS `luas_lantai`,`aa`.`alamat` AS `alamat`,`aa`.`alamat_a` AS `alamat_a`,`aa`.`alamat_b` AS `alamat_b`,`aa`.`alamat_kel` AS `alamat_kel`,`aa`.`alamat_kec` AS `alamat_kec`,`aa`.`koordinat_gps` AS `koordinat_gps`,`aa`.`koord_bidang` AS `koord_bidang`,`aa`.`dokumen_tgl` AS `dokumen_tgl`,`aa`.`dokumen_no` AS `dokumen_no`,`aa`.`luas` AS `luas`,`aa`.`status_tanah` AS `status_tanah`,`aa`.`kode_tanah` AS `kode_tanah`,`aa`.`ket` AS `ket`,`aa`.`kode_loktanah` AS `kode_loktanah`,`aa`.`tahun` AS `tahun`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`kondisi_kibc` AS `kondisi_kibc`,`aa`.`idall2` AS `idall2`,`aa`.`alamat_c` AS `alamat_c`,`aa`.`alamat_kec1` AS `alamat_kec1`,`aa`.`kota` AS `kota`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`aset_tetap` AS `aset_tetap`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`stusul` AS `stusul`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from ((( `view_kib_c2` `aa` left join  `v_pemelihara_tot_` `bb` on((`aa`.`idbi` = `bb`.`id_bukuinduk`))) left join  `v_pengaman_tot_` `cc` on((`aa`.`idbi` = `cc`.`id_bukuinduk`))) left join  `v_hapussebagian_tot` `dd` on((`aa`.`idawal` = `dd`.`idbi_awal`)));
+alter  VIEW  `view_kib_d` AS select `aa`.`e1` AS `e1`,`aa`.`id` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`cc`.`nm_wilayah` AS `alamat_kota`,`bb`.`id` AS `id`,`bb`.`konstruksi` AS `konstruksi`,`bb`.`panjang` AS `panjang`,`bb`.`lebar` AS `lebar`,`bb`.`luas` AS `luas`,`bb`.`alamat` AS `alamat`,`bb`.`alamat_a` AS `alamat_a`,`bb`.`alamat_b` AS `alamat_b`,`bb`.`alamat_kel` AS `alamat_kel`,`bb`.`alamat_kec` AS `alamat_kec`,`bb`.`koordinat_gps` AS `koordinat_gps`,`bb`.`koord_bidang` AS `koord_bidang`,`bb`.`dokumen_tgl` AS `dokumen_tgl`,`bb`.`dokumen_no` AS `dokumen_no`,`bb`.`status_tanah` AS `status_tanah`,`bb`.`kode_tanah` AS `kode_tanah`,`bb`.`ket` AS `ket`,`bb`.`tahun` AS `tahun`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`idall2` AS `idall2`,`bb`.`alamat_c` AS `alamat_c`,`bb`.`kota` AS `kota`,`dd`.`nm_wilayah` AS `alamat_kec1`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`aset_tetap` AS `aset_tetap`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`stusul` AS `stusul`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from ((( `view_buku_induk2` `aa` left join  `kib_d` `bb` on(((`aa`.`a1` = `bb`.`a1`) and (`aa`.`a` = `bb`.`a`) and (`aa`.`b` = `bb`.`b`) and (`aa`.`c` = `bb`.`c`) and (`aa`.`d` = `bb`.`d`) and (`aa`.`e` = `bb`.`e`) and (`aa`.`f` = `bb`.`f`) and (`aa`.`g` = `bb`.`g`) and (`aa`.`h` = `bb`.`h`) and (`aa`.`i` = `bb`.`i`) and (`aa`.`j` = `bb`.`j`) and (`aa`.`thn_perolehan` = `bb`.`tahun`) and (`aa`.`noreg` = `bb`.`noreg`) and (`aa`.`e1` = `bb`.`e1`)))) left join  `ref_kotakec` `cc` on(((`bb`.`alamat_b` = `cc`.`kd_kota`) and (`cc`.`kd_kec` = 0)))) left join  `ref_kotakec` `dd` on(((`dd`.`kd_kec` = `bb`.`alamat_c`) and (`bb`.`alamat_b` = `dd`.`kd_kota`) and (`dd`.`kd_kec` <> 0)))) where (`aa`.`f` = '04');
+alter  VIEW  `view_kib_d2` AS select `aa`.`e1` AS `e1`,`aa`.`id` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`cc`.`nm_wilayah` AS `alamat_kota`,`bb`.`id` AS `id`,`bb`.`konstruksi` AS `konstruksi`,`bb`.`panjang` AS `panjang`,`bb`.`lebar` AS `lebar`,`bb`.`luas` AS `luas`,`bb`.`alamat` AS `alamat`,`bb`.`alamat_a` AS `alamat_a`,`bb`.`alamat_b` AS `alamat_b`,`bb`.`alamat_kel` AS `alamat_kel`,`bb`.`alamat_kec` AS `alamat_kec`,`bb`.`koordinat_gps` AS `koordinat_gps`,`bb`.`koord_bidang` AS `koord_bidang`,`bb`.`dokumen_tgl` AS `dokumen_tgl`,`bb`.`dokumen_no` AS `dokumen_no`,`bb`.`status_tanah` AS `status_tanah`,`bb`.`kode_tanah` AS `kode_tanah`,`bb`.`ket` AS `ket`,`bb`.`tahun` AS `tahun`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`idall2` AS `idall2`,`bb`.`alamat_c` AS `alamat_c`,`bb`.`kota` AS `kota`,`dd`.`nm_wilayah` AS `alamat_kec1`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`aset_tetap` AS `aset_tetap`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`stusul` AS `stusul`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kc` AS `kc`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`kb` AS `kb`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from ((( `view_buku_induk2` `aa` left join  `kib_d` `bb` on(((`aa`.`a1` = `bb`.`a1`) and (`aa`.`a` = `bb`.`a`) and (`aa`.`b` = `bb`.`b`) and (`aa`.`c` = `bb`.`c`) and (`aa`.`d` = `bb`.`d`) and (`aa`.`e` = `bb`.`e`) and (`aa`.`f` = `bb`.`f`) and (`aa`.`g` = `bb`.`g`) and (`aa`.`h` = `bb`.`h`) and (`aa`.`i` = `bb`.`i`) and (`aa`.`j` = `bb`.`j`) and (`aa`.`thn_perolehan` = `bb`.`tahun`) and (`aa`.`noreg` = `bb`.`noreg`) and (`aa`.`e1` = `bb`.`e1`)))) left join  `ref_kotakec` `cc` on(((`bb`.`alamat_b` = `cc`.`kd_kota`) and (`cc`.`kd_kec` = '0')))) left join  `ref_kotakec` `dd` on(((`bb`.`alamat_b` = `dd`.`kd_kota`) and (`bb`.`alamat_c` = `dd`.`kd_kec`) and (`dd`.`kd_kec` <> '0')))) where (`aa`.`f` = '04');
+alter  VIEW  `view_kib_d2_total` AS select `aa`.`e1` AS `e1`,`bb`.`tot_pelihara` AS `tot_pelihara`,`cc`.`tot_pengaman` AS `tot_pengaman`,0 AS `tot_hapussebagian`,`aa`.`idbi` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`aa`.`alamat_kota` AS `alamat_kota`,`aa`.`id` AS `id`,`aa`.`konstruksi` AS `konstruksi`,`aa`.`panjang` AS `panjang`,`aa`.`lebar` AS `lebar`,`aa`.`luas` AS `luas`,`aa`.`alamat` AS `alamat`,`aa`.`alamat_a` AS `alamat_a`,`aa`.`alamat_b` AS `alamat_b`,`aa`.`alamat_kel` AS `alamat_kel`,`aa`.`alamat_kec` AS `alamat_kec`,`aa`.`koordinat_gps` AS `koordinat_gps`,`aa`.`koord_bidang` AS `koord_bidang`,`aa`.`dokumen_tgl` AS `dokumen_tgl`,`aa`.`dokumen_no` AS `dokumen_no`,`aa`.`status_tanah` AS `status_tanah`,`aa`.`kode_tanah` AS `kode_tanah`,`aa`.`ket` AS `ket`,`aa`.`tahun` AS `tahun`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`idall2` AS `idall2`,`aa`.`alamat_c` AS `alamat_c`,`aa`.`kota` AS `kota`,`aa`.`alamat_kec1` AS `alamat_kec1`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`aset_tetap` AS `aset_tetap`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`stusul` AS `stusul`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kc` AS `kc`,`aa`.`kb` AS `kb`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from (( `view_kib_d2` `aa` left join  `v_pemelihara_tot_` `bb` on((`aa`.`idbi` = `bb`.`id_bukuinduk`))) left join  `v_pengaman_tot_` `cc` on((`aa`.`idbi` = `cc`.`id_bukuinduk`)));
+alter  VIEW  `view_kib_e` AS select `aa`.`e1` AS `e1`,`aa`.`id` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`bb`.`id` AS `id`,`bb`.`buku_judul` AS `buku_judul`,`bb`.`buku_spesifikasi` AS `buku_spesifikasi`,`bb`.`seni_asal_daerah` AS `seni_asal_daerah`,`bb`.`seni_pencipta` AS `seni_pencipta`,`bb`.`seni_bahan` AS `seni_bahan`,`bb`.`hewan_jenis` AS `hewan_jenis`,`bb`.`hewan_ukuran` AS `hewan_ukuran`,`bb`.`ket` AS `ket`,`bb`.`tahun` AS `tahun`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`idall2` AS `idall2`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`aset_tetap` AS `aset_tetap`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`stusul` AS `stusul`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from ( `view_buku_induk2` `aa` left join  `kib_e` `bb` on(((`aa`.`a1` = `bb`.`a1`) and (`aa`.`a` = `bb`.`a`) and (`aa`.`b` = `bb`.`b`) and (`aa`.`c` = `bb`.`c`) and (`aa`.`d` = `bb`.`d`) and (`aa`.`e` = `bb`.`e`) and (`aa`.`f` = `bb`.`f`) and (`aa`.`g` = `bb`.`g`) and (`aa`.`h` = `bb`.`h`) and (`aa`.`i` = `bb`.`i`) and (`aa`.`j` = `bb`.`j`) and (`aa`.`thn_perolehan` = `bb`.`tahun`) and (`aa`.`noreg` = `bb`.`noreg`) and (`aa`.`e1` = `bb`.`e1`)))) where (`aa`.`f` = '05');
+alter  VIEW  `view_kib_e2` AS select `aa`.`e1` AS `e1`,`aa`.`id` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`bb`.`id` AS `id`,`bb`.`buku_judul` AS `buku_judul`,`bb`.`buku_spesifikasi` AS `buku_spesifikasi`,`bb`.`seni_asal_daerah` AS `seni_asal_daerah`,`bb`.`seni_pencipta` AS `seni_pencipta`,`bb`.`seni_bahan` AS `seni_bahan`,`bb`.`hewan_jenis` AS `hewan_jenis`,`bb`.`hewan_ukuran` AS `hewan_ukuran`,`bb`.`ket` AS `ket`,`bb`.`tahun` AS `tahun`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`idall2` AS `idall2`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`stusul` AS `stusul`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from ( `view_buku_induk2` `aa` left join  `kib_e` `bb` on(((`aa`.`a1` = `bb`.`a1`) and (`aa`.`a` = `bb`.`a`) and (`aa`.`b` = `bb`.`b`) and (`aa`.`c` = `bb`.`c`) and (`aa`.`d` = `bb`.`d`) and (`aa`.`e` = `bb`.`e`) and (`aa`.`f` = `bb`.`f`) and (`aa`.`g` = `bb`.`g`) and (`aa`.`h` = `bb`.`h`) and (`aa`.`i` = `bb`.`i`) and (`aa`.`j` = `bb`.`j`) and (`aa`.`thn_perolehan` = `bb`.`tahun`) and (`aa`.`noreg` = `bb`.`noreg`) and (`aa`.`e1` = `bb`.`e1`)))) where (`aa`.`f` = '05');
+alter  VIEW  `view_kib_e2_total` AS select `aa`.`e1` AS `e1`,`aa`.`idbi` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`aa`.`id` AS `id`,`aa`.`buku_judul` AS `buku_judul`,`aa`.`buku_spesifikasi` AS `buku_spesifikasi`,`aa`.`seni_asal_daerah` AS `seni_asal_daerah`,`aa`.`seni_pencipta` AS `seni_pencipta`,`aa`.`seni_bahan` AS `seni_bahan`,`aa`.`hewan_jenis` AS `hewan_jenis`,`aa`.`hewan_ukuran` AS `hewan_ukuran`,`aa`.`ket` AS `ket`,`aa`.`tahun` AS `tahun`,`bb`.`tot_pelihara` AS `tot_pelihara`,`cc`.`tot_pengaman` AS `tot_pengaman`,0 AS `tot_hapussebagian`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`idall2` AS `idall2`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`stusul` AS `stusul`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`thn_akun` AS `thn_akun`,`aa`.`kf` AS `kf`,`aa`.`ke` AS `ke`,`aa`.`kd` AS `kd`,`aa`.`kc` AS `kc`,`aa`.`kb` AS `kb`,`aa`.`ka` AS `ka`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_spk` AS `no_spk`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`jns_ekstra` AS `jns_ekstra` from (( `view_kib_e2` `aa` left join  `v_pemelihara_tot_` `bb` on((`aa`.`idbi` = `bb`.`id_bukuinduk`))) left join  `v_pengaman_tot_` `cc` on((`aa`.`idbi` = `cc`.`id_bukuinduk`)));
+alter  VIEW  `view_kib_f` AS select `aa`.`e1` AS `e1`,`aa`.`id` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`bb`.`bangunan` AS `bangunan`,`bb`.`konstruksi_tingkat` AS `konstruksi_tingkat`,`bb`.`konstruksi_beton` AS `konstruksi_beton`,`bb`.`luas` AS `luas`,`bb`.`alamat` AS `alamat`,`bb`.`alamat_a` AS `alamat_a`,`bb`.`alamat_b` AS `alamat_b`,`bb`.`alamat_kel` AS `alamat_kel`,`bb`.`alamat_kec` AS `alamat_kec`,`bb`.`koordinat_gps` AS `koordinat_gps`,`bb`.`koord_bidang` AS `koord_bidang`,`bb`.`dokumen_tgl` AS `dokumen_tgl`,`bb`.`dokumen_no` AS `dokumen_no`,`bb`.`tmt` AS `tmt`,`bb`.`status_tanah` AS `status_tanah`,`bb`.`kode_tanah` AS `kode_tanah`,`bb`.`ket` AS `ket`,`bb`.`tahun` AS `tahun`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`idall2` AS `idall2`,`cc`.`nm_wilayah` AS `alamat_kota`,`bb`.`alamat_c` AS `alamat_c`,`dd`.`nm_wilayah` AS `alamat_kec1`,`bb`.`kota` AS `kota`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`aset_tetap` AS `aset_tetap`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`stusul` AS `stusul`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from ((( `view_buku_induk2` `aa` left join  `kib_f` `bb` on(((`aa`.`a1` = `bb`.`a1`) and (`aa`.`a` = `bb`.`a`) and (`aa`.`b` = `bb`.`b`) and (`aa`.`c` = `bb`.`c`) and (`aa`.`d` = `bb`.`d`) and (`aa`.`e` = `bb`.`e`) and (`aa`.`f` = `bb`.`f`) and (`aa`.`g` = `bb`.`g`) and (`aa`.`h` = `bb`.`h`) and (`aa`.`i` = `bb`.`i`) and (`aa`.`j` = `bb`.`j`) and (`aa`.`thn_perolehan` = `bb`.`tahun`) and (`aa`.`noreg` = `bb`.`noreg`) and (`aa`.`e1` = `bb`.`e1`)))) left join  `ref_kotakec` `cc` on(((`bb`.`alamat_b` = `cc`.`kd_kota`) and (`cc`.`kd_kec` = '0')))) left join  `ref_kotakec` `dd` on(((`bb`.`alamat_b` = `dd`.`kd_kota`) and (`bb`.`alamat_c` = `dd`.`kd_kec`) and (`dd`.`kd_kec` <> '0')))) where (`aa`.`f` = '06');
+alter  VIEW  `view_kib_f2` AS select `aa`.`e1` AS `e1`,`aa`.`id` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`cc`.`nm_wilayah` AS `alamat_kota`,`bb`.`bangunan` AS `bangunan`,`bb`.`konstruksi_tingkat` AS `konstruksi_tingkat`,`bb`.`konstruksi_beton` AS `konstruksi_beton`,`bb`.`luas` AS `luas`,`bb`.`alamat` AS `alamat`,`bb`.`alamat_a` AS `alamat_a`,`bb`.`alamat_b` AS `alamat_b`,`bb`.`alamat_kel` AS `alamat_kel`,`bb`.`alamat_kec` AS `alamat_kec`,`bb`.`koordinat_gps` AS `koordinat_gps`,`bb`.`koord_bidang` AS `koord_bidang`,`bb`.`dokumen_tgl` AS `dokumen_tgl`,`bb`.`dokumen_no` AS `dokumen_no`,`bb`.`tmt` AS `tmt`,`bb`.`status_tanah` AS `status_tanah`,`bb`.`kode_tanah` AS `kode_tanah`,`bb`.`ket` AS `ket`,`bb`.`tahun` AS `tahun`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`idall2` AS `idall2`,`bb`.`alamat_c` AS `alamat_c`,`bb`.`kota` AS `kota`,`dd`.`nm_wilayah` AS `alamat_kec1`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`aset_tetap` AS `aset_tetap`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`stusul` AS `stusul`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from ((( `view_buku_induk2` `aa` left join  `kib_f` `bb` on(((`aa`.`a1` = `bb`.`a1`) and (`aa`.`a` = `bb`.`a`) and (`aa`.`b` = `bb`.`b`) and (`aa`.`c` = `bb`.`c`) and (`aa`.`d` = `bb`.`d`) and (`aa`.`e` = `bb`.`e`) and (`aa`.`f` = `bb`.`f`) and (`aa`.`g` = `bb`.`g`) and (`aa`.`h` = `bb`.`h`) and (`aa`.`i` = `bb`.`i`) and (`aa`.`j` = `bb`.`j`) and (`aa`.`thn_perolehan` = `bb`.`tahun`) and (`aa`.`noreg` = `bb`.`noreg`) and (`aa`.`e1` = `bb`.`e1`)))) left join  `ref_kotakec` `cc` on(((`bb`.`alamat_b` = `cc`.`kd_kota`) and (`cc`.`kd_kec` = '0')))) left join  `ref_kotakec` `dd` on(((`bb`.`alamat_b` = `dd`.`kd_kota`) and (`bb`.`alamat_c` = `dd`.`kd_kec`) and (`dd`.`kd_kec` <> '0')))) where (`aa`.`f` = '06');
+alter  VIEW  `view_kib_f2_total` AS select `aa`.`e1` AS `e1`,`bb`.`tot_pelihara` AS `tot_pelihara`,`cc`.`tot_pengaman` AS `tot_pengaman`,0 AS `tot_hapussebagian`,`aa`.`idbi` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`aa`.`alamat_kota` AS `alamat_kota`,`aa`.`bangunan` AS `bangunan`,`aa`.`konstruksi_tingkat` AS `konstruksi_tingkat`,`aa`.`konstruksi_beton` AS `konstruksi_beton`,`aa`.`luas` AS `luas`,`aa`.`alamat` AS `alamat`,`aa`.`alamat_a` AS `alamat_a`,`aa`.`alamat_b` AS `alamat_b`,`aa`.`alamat_kel` AS `alamat_kel`,`aa`.`alamat_kec` AS `alamat_kec`,`aa`.`koordinat_gps` AS `koordinat_gps`,`aa`.`koord_bidang` AS `koord_bidang`,`aa`.`dokumen_tgl` AS `dokumen_tgl`,`aa`.`dokumen_no` AS `dokumen_no`,`aa`.`tmt` AS `tmt`,`aa`.`status_tanah` AS `status_tanah`,`aa`.`kode_tanah` AS `kode_tanah`,`aa`.`ket` AS `ket`,`aa`.`tahun` AS `tahun`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`idall2` AS `idall2`,`aa`.`alamat_c` AS `alamat_c`,`aa`.`kota` AS `kota`,`aa`.`alamat_kec1` AS `alamat_kec1`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`stusul` AS `stusul`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from (( `view_kib_f2` `aa` left join  `v_pemelihara_tot_` `bb` on((`aa`.`idbi` = `bb`.`id_bukuinduk`))) left join  `v_pengaman_tot_` `cc` on((`aa`.`idbi` = `cc`.`id_bukuinduk`)));
+alter  VIEW  `view_kib_g` AS select `aa`.`id` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`e` AS `e`,`aa`.`e1` AS `e1`,`aa`.`f` AS `f`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`idall2` AS `idall2`,`aa`.`nmseksi` AS `nmseksi`,`bb`.`uraian` AS `uraian`,`bb`.`ket` AS `ket`,`bb`.`tahun` AS `tahun`,`bb`.`Id` AS `Id`,`bb`.`pencipta` AS `pencipta`,`bb`.`jenis` AS `jenis`,`aa`.`aset_tetap` AS `aset_tetap`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`stusul` AS `stusul`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from ( `view_buku_induk2` `aa` left join  `kib_g` `bb` on(((`aa`.`a1` = `bb`.`a1`) and (`aa`.`a` = `bb`.`a`) and (`aa`.`b` = `bb`.`b`) and (`aa`.`c` = `bb`.`c`) and (`aa`.`d` = `bb`.`d`) and (`aa`.`e` = `bb`.`e`) and (`aa`.`f` = `bb`.`f`) and (`aa`.`g` = `bb`.`g`) and (`aa`.`h` = `bb`.`h`) and (`aa`.`i` = `bb`.`i`) and (`aa`.`j` = `bb`.`j`) and (`aa`.`thn_perolehan` = `bb`.`tahun`) and (`aa`.`noreg` = `bb`.`noreg`) and (`aa`.`e1` = `bb`.`e1`)))) where ((`aa`.`f` = '07') and (`aa`.`g` = '24'));
+alter  VIEW  `view_kib_g_total` AS select `aa`.`idbi` AS `idbi`,`aa`.`a1` AS `a1`,`aa`.`a` AS `a`,`aa`.`b` AS `b`,`aa`.`c` AS `c`,`aa`.`d` AS `d`,`aa`.`f` AS `f`,`aa`.`e` AS `e`,`aa`.`g` AS `g`,`aa`.`h` AS `h`,`aa`.`i` AS `i`,`aa`.`j` AS `j`,`aa`.`noreg` AS `noreg`,`aa`.`thn_perolehan` AS `thn_perolehan`,`aa`.`jml_barang` AS `jml_barang`,`aa`.`satuan` AS `satuan`,`aa`.`harga` AS `harga`,`aa`.`jml_harga` AS `jml_harga`,`aa`.`asal_usul` AS `asal_usul`,`aa`.`kondisi` AS `kondisi`,`aa`.`status_barang` AS `status_barang`,`aa`.`tgl_update` AS `tgl_update`,`aa`.`id_barang` AS `id_barang`,`aa`.`nmbidang` AS `nmbidang`,`aa`.`nmopd` AS `nmopd`,`aa`.`nmunit` AS `nmunit`,`aa`.`tgl_sensus` AS `tgl_sensus`,`aa`.`tgl_buku` AS `tgl_buku`,`aa`.`idawal` AS `idawal`,`aa`.`id_lama` AS `id_lama`,`aa`.`idall` AS `idall`,`aa`.`uid` AS `uid`,`aa`.`nm_barang` AS `nm_barang`,`aa`.`idall2` AS `idall2`,`aa`.`e1` AS `e1`,`aa`.`nmseksi` AS `nmseksi`,`aa`.`uraian` AS `uraian`,`aa`.`jenis` AS `jenis`,`aa`.`pencipta` AS `pencipta`,`aa`.`ket` AS `ket`,`aa`.`tahun` AS `tahun`,`aa`.`Id` AS `Id`,`bb`.`tot_pelihara` AS `tot_pelihara`,`cc`.`tot_pengaman` AS `tot_pengaman`,0 AS `tot_hapussebagian`,`aa`.`staset` AS `staset`,`aa`.`verifikasi` AS `verifikasi`,`aa`.`ref_idruang` AS `ref_idruang`,`aa`.`aset_tetap` AS `aset_tetap`,`aa`.`tahun_sensus` AS `tahun_sensus`,`aa`.`status_penguasaan` AS `status_penguasaan`,`aa`.`nilai_sisa` AS `nilai_sisa`,`aa`.`ref_idpemegang2` AS `ref_idpemegang2`,`aa`.`ref_idpenanggung` AS `ref_idpenanggung`,`aa`.`ref_idpemegang` AS `ref_idpemegang`,`aa`.`masa_manfaat` AS `masa_manfaat`,`aa`.`harga_beli` AS `harga_beli`,`aa`.`harga_atribusi` AS `harga_atribusi`,`aa`.`ref_idatribusi` AS `ref_idatribusi`,`aa`.`jml_gambar` AS `jml_gambar`,`aa`.`thn_susut_aw` AS `thn_susut_aw`,`aa`.`thn_susut_ak` AS `thn_susut_ak`,`aa`.`bln_susut_aw` AS `bln_susut_aw`,`aa`.`bln_susut_ak` AS `bln_susut_ak`,`aa`.`stusul` AS `stusul`,`aa`.`ref_idstatussurvey` AS `ref_idstatussurvey`,`aa`.`jns_ekstra` AS `jns_ekstra`,`aa`.`jns_lain` AS `jns_lain`,`aa`.`penggunaan` AS `penggunaan`,`aa`.`no_spk` AS `no_spk`,`aa`.`tgl_spk` AS `tgl_spk`,`aa`.`no_ba` AS `no_ba`,`aa`.`tgl_ba` AS `tgl_ba`,`aa`.`ka` AS `ka`,`aa`.`kb` AS `kb`,`aa`.`kc` AS `kc`,`aa`.`kd` AS `kd`,`aa`.`ke` AS `ke`,`aa`.`kf` AS `kf`,`aa`.`thn_akun` AS `thn_akun` from (( `view_kib_g` `aa` left join  `v_pemelihara_tot` `bb` on((`aa`.`idbi` = `bb`.`idbi_awal`))) left join  `v_pengaman_tot` `cc` on((`aa`.`idbi` = `cc`.`idbi_awal`)));
+
+> update closing
+CREATE TABLE `t_closing` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `c` char(2) COLLATE latin1_general_ci NOT NULL DEFAULT '00',
+  `d` char(2) COLLATE latin1_general_ci NOT NULL DEFAULT '00',
+  `tgl` date DEFAULT NULL COMMENT 'tgl closing',
+  `ket` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
+  `uid` varchar(20) COLLATE latin1_general_ci DEFAULT NULL,
+  `tgl_update` datetime DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+
+//2015-12-11 --------------------------------------------------------------------
+> update penyusutan rehab penilaian
+- common/fnpenyusutan.php
+- db: penilaian +masa_manfaat
+
+//2015-12-12 -noer
+>update table ,view & php migrasi
+- bi_kib_a_tmp,bi_kib_c_tmp,bi_kib_d_tmp,bi_kib_f_tmp  + field nm_desa_kel
+- v_bi_kib_a_tmp,v_bi_kib_b_tmp,v_bi_kib_c_tmp,v_bi_kib_d_tmp,v_bi_kib_e_tmp,v_bi_kib_f_tmp
+- insert_bi_kibv3.php
+
+
+//20151219 ru -------------------------------------------------------
+> koreksi: penatusahaan -> baru -> form pilih daftar pegawai/ruang -> baru : form nya tidak muncul
+- common/fngbr.php
+- js/ruang.js
+- js/pegawai.js
+
+//20151221 ru --------------------------------------
+> tambah: penatuasahaan --> tampil nama skpd di keterangan
+> tambah: pilihan skpd tambah tampilan kode skpd
+- common/fnfile.php
+- common/fnpenatausaha.php
+- var_def.php : $Main->TAMPIL_BIDANG = TRUE;
+
+
+//20151221 ru --------------------------------------------
+- pages/base_login.php
+> perencanaan pp27 
+- pages/perencanaan/*
+- js/perencanaan/*
+- js/HrgSatPilih.js
+- pages/01/HrgSatPilih.php
+- common/daftarobj.php
+
+- pages/master/*
+- js/master/*
+
+>Pemanbahan Array $Main->BentukPemanfaatan
+- common/vars.php 
+
+> di  getdaftaropsi pada komen //kondisi belum sensus
+- common/fnpenatausahaan.php 
+
+- pages/ref/home.php :  + tombol menuju page urusan
+- pages/01/cariakun2.php
+- pages/01/cariakun1.php 
+- pages/01/caribarang2a.php
+
+> pengadaaan
+- js/pengadaan/*
+- pages/pengadaan/*
+
+> tgr
+- pages/gantirugi/*
+- js/gantirugi/*
+- pages/base_main.php
+
+> pemusnahan
+- pages/pemusnahan/*
+- js/pemusnahan/*
+
+> penilaian
+- pages/penilaian/*
+- js/penilaian/*
+
+> penggunaaan
+- common/fnpenggunaan.php
+- common/fnpenggunaanketetapan.php
+- common/fnpenggunaan_det.php
+- common/fnpenggunaan_cari.php
+- js/penggunaanketetapan.js
+- js/penggunaaan.js
+- js/penggunaan_det.js
+- js/penggunaan_cari.js
+
+> images
++ images/index_37_srg.png
++ images/index_71_srg.png
++ images/index2_37_srg.png
++ images/index2_71_srg.png
+
+> main menu 
+- pages/base_main.php
+
+> vars_def.php :
+//$Main->PP27_MAINMENU = TRUE;
+$Main->PP27_PERENCANAAN = TRUE;
+$Main->PP27_PENGADAAN = TRUE;
+//$Main->PP27_PENERIMAAN = TRUE;
+$Main->PP27_PENGGUNAAN = TRUE;
+//$Main->PP27_PEMANFAATAN = TRUE;
+//$Main->PP27_PEMELIHARA = TRUE;
+//$Main->PP27_PENILAIAN = TRUE;
+//$Main->PP27_PENGHAPUSAN = TRUE;
+//$Main->PP27_PEMINDAHTANGAN = TRUE;
+$Main->PP27_GANTIRUGI = TRUE;
+
+
+db:
+- v1_rkb, rkb
+- ref_jurnal --> tambah field,
+- dkb
+- ref_std_harga
++ ref_skpd_urusan,
++ ref_urusan
+- rkpb
+- dkpb
+- trigger dkpb_aft_del
+- update v1_rkpb,v1_dkpb
++ t_rencana_pemanfaatan
++ t_rencana_pemindahtanganan 
++ t_rencana_penghapusan
++ v1_refskpd_urusan  
++ ref_program
++ ref_tambah_manfaat  
++ rka
+- gantirugi
++ v1_gantirugi
++ pemusnhanan, trigger pemusnahan_aft_del, pemusnahan_det, pemusnahan_panitia
++ v_pemusnahan, v_pemusnahanba
+- penilaian
++ penilaian_pindahtangan, penilaian_manfaat
++ penggunaan, penggunaan_det, penggunaan_ketetapan, v1_penggunaan 
+
+harus diisi data:
+- ref_jurnal,
+- ref_barang --> mapping kd aset, kd belanja modal, kd akum susut
+- ref_urusan --> kd skpd keuangan
+- ref_skpd_urusan --> mapping skpd keuangan dan pengelola barang
+
+- data rkb lama : rkb.nm_barang --> ambil dari ref_barang.nm_barang
+- data rkb lama : rkb.nm_account --> ambil dari ref_jurnal.nm_barang
+- data dkb lama : dkb.nm_barang, nm_account, 
+- data rkpb lama: rkpd.nm_barang, nm_account
+- data dkpb lama: dkpb.nm_barang. nm_account
+
+
+> rekap penyusutan
+- common/fnrekap_penyusutan.php
+- common/penyusutan.php
+
+db:
++ sf_get_susut()
+
+
+//20160104 rusyad -------------------------------
+> koreksi: rekap neraca --> jumlah aset tetap tidak tampil
+- common/pembukuan2_ajx.php
+
+
+
+//20160106 ---------------------------------------
+> webservice
+- pages/jurnal/jurnalxml.php
+- api.php 
+
+
+//20160114 -----------------------------------
+> master barang --> kode j masih 2 digit
+- pages/master/ref_aset/ref_barang.php
+> status ekstra diganti jadi < 300000 u bogor
+- common/fnstatusaset.php
+
+
+//20160120 
+> penyusutan garut
+- common/fnpenyusutan
+- common/fnrekappenyusutan.php
+- js/fnpenyusutan.js
+- js/rekappenyusutaan.js
+- common/fnfile.php
+- common/fnpenatausahaan.php
+
+db:
+- pemeliharaan
+- triger pemeliharaan utk penambahan masa manfaat 
+- store func sf_get_tambah_manfaat()
+- buku_induk.masa_manfaat_tot (masa manfaat barang dan rehab)
+- store function sf_susut_mode4() u/ garut
+
+
+
+20160121 -------------------------------------------------
+> penyusutan serang: ekstra, rekap penyusutan level kode barang seperi rekap bi 2
+- common/fnrekappenyustan.php
+- common/fnpenyusutan.php
+- comon/fnpenatausaha.php
+- 
+
+db:
+- v_jurnal_penyusutan
+- v_ref_kib_keu_penyusutan
+
+
+
+> pembukuan /rekap neraca lama pages.php?Pg=Rekap2_old aktif
+- js/pembukuan2_2.js
+
+
+20160209 -------------------------------------------------
+> barcode tambah pilihan utk label 8*4
+- js/barcode.js
+
+
+20160213 rusyad ----------------------------------------------
+> penataushaan -> form edit -> simpan: jika data harga beli dan harga atribusi dari copy/paste, tidak menjumlah ke harga perolehan
+- common/fnfile.php
+> rekap penyusutan : yang nilai 0 tidak ditampilkan
+- common/fnrekappenyusutan.php
+> koreksi --> harga asal = harga perolehan + harga rehab sebelumnya
+- common/fnkoreksi.php
+- common/fnkoreksi2.php
+
+
+//2016-03-07 Iwan --------------------------------------------------
+- pages/pemeliharaan/pemeliharaan_tambah_manfaat.php
+- js/pemeliharaan/pemeliharaan_tambah_manfaat.js
+- pages.php : case 'Pemeliharaan_Tambah_Manfaat'
+
+
+//2016-04-01 Iwan --------------------------------------------------
+- pages/07/listpelihara.php
+- common/fnpelihara.php
+
+//2016-04-07 Iwan --------------------------------------------------
+- pages/common/fnpelihara.php :validasi cek penyusutan dan sudah closing
+
+//2016-04-11 Iwan --------------------------------------------------
+- pages/common/fnpelihara.php :tambah entry menambah masa manfaat
+ DB : edit nama field tambah_manfaat jadi tambah_masa_manfaat di tbl pemeliharaan
+
+//2014.04.26 Iwan -------------------------------------------------
+- pages/kondisi/kondisi.php
+- js/kondisi/kondisi.js
+- js/kondisi/kondisi.js
+- pages.php : case 'Kondisi'
+- common/vars.php : $Main->HeadScript tambah <script src="js/kondisi/kondisi.js" type="text/javascript"></script>	
+- DB + v_t_kondisi
+
+//2016.05.11 Iwan -------------------------------------------------
+- pages/gantirugi/gantirugi.php
+- pages/gantirugi/gantirugi_cari.php
+- pages/gantirugi/gantirugibayar.php
+- pages/gantirugi/gantirugiprogres.php
+- pages/base_main.php : Pg=tgr jadi Pg=gantirugi
+- js/gantirugi/gantirugi.js
+- js/gantirugi/gantirugi_cari.js
+- js/gantirugi/gantirugibayar.js
+- js/gantirugi/gantirugiprogres.js
+- pages.php :case gantirugi,gantirugibayar,gantirugiprogres,gantirugi_cari
+- common/vars.php :tambah $Main->StatusTGR
+
+DB + v_gantirugi
+   + v_gantirugi_bayar
+   - update tbl gantirugi,gantirugi_bayar
+
+//2016.05.13 Iwan -------------------------------------------------
+- pages/common/fnpelihara.php : validasi penyusutan dan closing di form baru,edit,hapus
+- pages/common/fnpengaman.php : validasi penyusutan dan closing di form baru,edit,hapus
+- pages/10/listpindahtangan.php : validasi closing di form baru,edit,hapus
+- pages/common/fnpemanfaat.php : validasi closing di form baru,edit,hapus
+- pages/common/fngantirugi.php : validasi closing di form baru,edit,hapus
+
+//2016.05.23 wita ------------------------------------
+- common/vars.php : tambah daftar $Main-JenisHibah
+- pages/05/entryid_lama.php : tambah $fmJENISHIBAH
+- common/fnpenatausaha.php : tambah filter jenis hibah, tambah tampil daftar jenis hibah, 
+- common/fnfile.php : simpan jensi hibah ke buku_induk.jns_hibah, tambah form entry jns hibah, jika closing saat edit jenis hibah dikunci
+
+DB :
+- view_buku_induk2, view_kib_a, view_kib_a2,view_kib_b2,view_kib_c,view_kib_c2,view_kib_d2,view_kib_e2,
+  view_kib_f2, view_kib_g : tambah field jns_hibah
+
+//2016.05.30 Iwan -------------------------------------------------
+- common/fnjurnal.php : tambah menu kondisi di function setPage_HeaderOther
+- common/fnasetlainlain.php : tambah menu kondisi di function setPage_HeaderOther
+- common/fnkapitalisasi.php : tambah menu kondisi di function setPage_HeaderOther
+- common/fnkoreksi.php : tambah menu kondisi di function setPage_HeaderOther
+- pages.php : tambah case Koreksi
+
+//2016.05.31 Iwan -------------------------------------------------
+- common/fnpelihara.php : tutup / koment kolom nilai perolehan di daftar pemeliharaan 
+- common/fnpengaman.php : tambah entry tgl perolehan
+- common/fnkoreksi.php : tambah entry tgl perolehan
+- common/fnpenatausaha.php : tambah parameter 'fmTANGGALPerolehan' di PengamanSimpan= new AjxSimpanObj
+- pages/penilaian/penilaian.php : tambah entry tgl perolehan
+- DB : + field tgl_perolehan di tbl t_koreksi,penilaian,pengamanan
+
+//20160607 rusyad ------------------------------------------------
+- fnfile : getTglClosing()
+
+//2016.06.08 Iwan -------------------------------------------------
+- pages/gantirugi/gantirugi.php
+- pages/gantirugi/gantirugibayar.php
+- js/gantirugi/gantirugi.js
+- js/gantirugi/gantirugibayar.js
+
+//2016.06.09 Iwan -------------------------------------------------
+- pages/gantirugi/gantirugi.php
+- pages/gantirugi/gantirugibayar.php
+- js/gantirugi/gantirugi.js
+- js/gantirugi/gantirugibayar.js
+- common/fnpenatausaha.php : tambah $formcaribi=='gantirugi_cari'
+
+//2016.06.14 Saeful ----------------------------------------------
+-common/fnpenyusutan.php : Edit -> susutSatu(), susutSemester(), genFormSusut(), genFormSusutSatu(), setKolomHeader(), setKolomData(), setDaftar_after_getrow()
+						   Tambah -> susut1barang_pandeglang()
+
+//2016.06.15 Iwan -------------------------------------------------
+- common/fnkoreksi.php 
+- js/fnkoreksi.js 
+
+//2016.06.21 Iwan -------------------------------------------------
+- common/fnpengaman.php
+
+
+
+
+//2015/06/22 rusyad ---------------------------
+> font size diganti 12 dari 11
+- css/template_css.css  :
+   td {	font-size: 12px;} 
+   input, textarea, select {
+   .text_area {
+
+
+//2016.06.23 Iwan -------------------------------------------------
+- common/fnpelihara.php
+- common/fnpengaman.php
+- common/fnhapussebagian.php
+- pages/penilaian/penilaian.php
+
+//2016.06.23 Saeful ----------------------------------------------
+- common/fnpenyusutan.php : batalSusut(), setKolomHeader(), setKolomData(), genFormSusut(), genFormSusutSatu()
+
+
+//2016.07.01 Iwan -------------------------------------------------
+- common/fnpelihara.php
+- common/fnkoreksi2.php
+- common/fnpengaman.php
+- pages/penilaian/penilaian.php
+- ajaxprs.php : edit param Pelihara_FormEntry()
+- tambah field tgl_perolehan di tbl_koreksi
+- tambah field tgl_create dgn tipe datetime
+- tambah field uid_create type sama spt uid
+- di trigger before insert 
+	isi tgl_create = now()
+	isi new.uid_create = new.uid
+
+//2016.07.15 Iwan -------------------------------------------------
+- common/fnpelihara.php
+- pages/penilaian/penilaian.php
+- update v_pemanfaat
+
+//2016.07.18 Iwan -------------------------------------------------
+- common/fnkoreksi.php
+- common/fnkoreksi2.php
+- common/fnpemanfaat.php
+- pages/penilaian/penilaian.php
+- js/koreksi.js
+- update v1_koreksi
+
+//2016.07.19 Iwan -------------------------------------------------
+- common/fnpenatausahaan.php : PemanfaatSimpan tambah ,'fmTANGGALPEROLEHAN'
+- pages/rekap/rekapbulanan.php 
+
+
+//2016.07.01 Saeful ----------------------------------------------
+-common/fnpenatausaha.php : getDaftarOpsi() -> add kondisi cek penyusutan
+
+//2016.07.13 rusyad --------------------
+> sensus : formname, z-index
+- sensus.js
+
+
+//20160715 rusyad ------------------------------
+> file var_def.php ada yang timpa, dicoba di restore lg
+- var_def.php
+> dkb tidak tersimpan
+- kurang field p,q
+> rekap bi 2 tidak muncul
+- pages.php case rekap5
+> sensus - simpan baru - barang tidak ada  -> tidak perlu cek isi kondisi
+- fnsensus.php simpanbaru()
+> ref_idruang ganti tipe 
+- tabel sensus field ref_idruang , ref_idruang_lama ganti tipe data big int
+
+//20160716 RUSYAD ----------------------------------
+> header, menu hasil sensus
+- common/fnsensushasil.php
+> rincian harga brang sensus
+- common/fnfile.php
+- common/fnsensus
+- tabel sensus + idbi_awal
+- tambah triger sensus_bef_ins u/ isi idbi_awal
+- update view view2_sensus
+> rekap hasil
+- db: tambah view v1_pemanfaatan_bi
+
+
+//20160720 rusyad --------------------------------------
+> sensus tidak tercatat
+- common/daftarobj.php
+- common/fnsensustidaktercatat.php
+- pages/01/caribarang2c.php
+- db: barang_tidak_tercatat + field kota, ganti type ref_idruang bigint
+
+
+//20160725 wita ------------------------------------------
+> rincian penatausahaan : tampil tgl buku dulu sebelum tgl perolehan
+- common/fnfile.php : Penatausahaan_genTableRowDet()
+
+
+//20160725 rusyad ----------------------------------------
+- t_transaksi + field : tgl_create,uid_create
+- + trigger t_transaksi_bef_ins
+
+//20160726 chandra ---------------------------------------
+- /var/www/atisisbada_demo_v2/pages/master/ref_skpd_keuangan
+- /var/www/atisisbada_demo_v2/pages/master/refstdbutuh
+- /var/www/atisisbada_demo_v2/pages/master/refprogram
+
+
+//20160729 rusyad --------------------------------------
+> toggler penatusahaan rincian
+- common/fnfile.php
+- common/fnpenatausaha.php
+- js/penatausaha.js
+
+//2016.08.01 Iwan -------------------------------------------------
+- pages/kondisi/kondisi.php
+DB : ubah tipe data tgl di tabel t_kondisi dari datetime ke date
+
+//20160801 wita ------------------------
+>validasi nomor polisi tidak boleh sama
+- common/fnfile.php : Penatausahaan_Proses()
+
+>penatausahaan - total harga
+- common/fnpenatausaha.php : genSumHal()
+
+//2016.08.02 Iwan -------------------------------------------------
+- common/fnhapussebagian.php
+- common/fnpengaman.php
+- common/fnasetlainlain.php
+
+//20160802 wita -------------------------------------------
+>update pengadaan
+- pages/pengadaan/dpb_rencana.php
+- pages/pengadaan/fndpb.php
+- pages/pengadaan/rekapdpb.php
+- pages/pengadaan/rekapdpb_skpd.php
+- pages/pengadaan/dpb_spk.php
+- pages/pengadaan/dpb_spk_det.php
+- js/pengadaan/dpb_spk.js
+- js/pengadaan/dpb_spk_det.js
+
+> Penatausahaan - tampilan filter
+- pages/05/listbi.php : min-width:1200px diubah menjadi 1480px
+
+>tulisan 'jenis hibah' diganti menjadi 'sumber dana'
+- common/fnfile.php : Penatausahaan_FormEntry()
+- common/fnpenatausaha.php : genHeader(), getDaftarOpsi()
+
+//20160803 chandra ---------------------------------------
+> update revisian
+- pages/master/refjurnal.php
+- pages/master/ref_rekening2.php
+
+//20160804 chandra --------------------------------------
+> nambah function explode di ref_skpd.php
+- pages/master/ref_skpd.php
+
+
+//2016.08.04 rusyad -------------------------------------------------
+> history gambar jika di hapus
+- common/fngbr.php
+- tabel gambar_hist
+- triger gambar_aft_del
+> hist create
+- gambar + field uid_create, tgl_create
+- triger gambar_bef_ins
+
+2016.08.05 chandra ----------------------------------------------
+> referensi akun
+- tahun anggaran tidak difungsikan
+- function simpan
+- function edit - simpan
+- var/www/atisisbada_demo_v2/pages/master/refjurnal.php
+- sudah di upload ke demo
+
+2016.08.08 chandra -------------------------------------------
+> Daftar Mapping SKPD dan Urusan Pemerintahan
+>> var/www/demo_atisisbada_v2/pages/master/refskpd_urusan.php
+ -. tombol baru dihilangkan
+
+
+20160810 rusyad --------------------------------------------------
+> get akumsusut, rincian penatausahaan cetak 
+- common/fnfile.php
+
+
+2016.08.15 wita --------------------------------------------
+> penghapusan - validasi
+- common/fnpenghapusan.php
+>penghapusan - simpan akumulasi penyusutan
+- common/fnpenghapusan.php
+
+//2016.08.16 Iwan -------------------------------------------------
+- common/fnkapitalisasi.php
+- common/fnasetlainlain.php
+- _DOC/format.jurnal_iwan.xls
+
+- DB : + field nilai_buku,nilai_susut di tbl t_asetlainlain dan t_kapitalisasi
+- DB : update v1_kapitalisasi
+- DB : update v1_asetlainlain
+
+//2016.08.19 Iwan -------------------------------------------------
+- common/fnkoreksi.php
+
+//20116.08.19 Saeful ----------------------------------------------
+-DB : 
++store prosedure sp_jurnal_susut
++trigger penyusutan_aft_ins, penyusutan_aft_del pada table penyusutan
+
+//2016.08.24 chandra ------------------------------------------
+ref_penyusutan
+-. var/www/atisisbada_demo_v2/pages/master/ref_penyusutan.php
+-. var/www/atisisbada_demo_v2/js/master/ref_penyusutan.js
+
+//2016.08.25 Iwan -------------------------------------------------
+- common/fnpelihara.php
+- pages/07/listpelihara.php
+- DB : update v_pemelihara		
+
+//2016.08.25 wita --------------------------------------------------
+>Penatausahaan - filter
+- common/fnpenatausaha.php : getDaftarOpsi()
+
+//2016.08.26 Saeful -------------------------------------------------
+-common/fnpenyusutan.php : susutSatu(), susutSemester(), susut1barang_jabar2(), susut1barang_tasik(), susut1barang_pandeglang()
+-DB : - sp_jurnal_susut(), sf_susut_mode3_bln, sf_susut_mode3_thn, sf_susut_mode5, sf_susut_mode6, sf_susut_mode7
+
+//2016.08.26 chandra --------------------------------------------
+> master data
+>> ref_kapitalisasi
+- var/www/atisisbada_demo_v2/pages/master/ref_kapitalisasi.php
+- var/www/atisisbada_demo_v2/js/master/ref_kapitalisasi.js
+- v_ref_kapitalisasi
+>> ref_tandatangan
+- var/www/atisisbada_demo_v2/pages/master/ref_tandatangan.php
+- var/www/atisisbada_demo_v2/js/master/ref_tandatangan.js
+
+//2016.08.29 wita ---------------------------------------
+> Penatausahaan - filter
+- common/fnpenatausaha.php : getDaftarOpsi()
+- common/fnkotakec.php
+> Reklas Barang - Penyusutan
+- common/fnreclass.php : simpan2()
+
+//2016.08.29 Saeful -------------------------------------------------
+>common/fnpenyusutan.php 
+-tambah parameter jns_trans2 pada fungsi susutSatu() dan susutSemester()
+-set_selector_other() : edit isi case 'susut' & 'susutsatu'
+
+//2016.08.30 wita ---------------------------------------
+- common/fnpenatausaha.php : tambah thn_perolehan di $infobrg = "  bidang='$nm' thn_perolehan='".$isi['thn_perolehan']."'";
+
+//2016.08.31 chandra --------------------------------------------
+> master data
+>> ref_kapitalisasi
+- var/www/atisisbada_demo_v2/pages/master/ref_kapitalisasi.php
+>> ref_tandatangan
+- var/www/atisisbada_demo_v2/js/master/ref_tandatangan.js
+>> ref_penyusutan
+/var/www/atisisbada_demo_v2/pages/master/ref_penyusutan.php
+
+
+//2016.08.31 rusyad -----------------------------------------
+> tabel pemindahtangan , pemanfaatan, gantirugi
+> sp_jurnal_susut()
+
+//2016.09.01 Iwan -------------------------------------------------
+- common/fnpelihara.php
+- pages/07/listpelihara.php
+
+//2016.09.02 Wita ------------------------------------------------
+> penataushaan - sumber dana
+- common/fnpenatausaha.php
+- common/fnfile.php
+
+//2016.09.05 Saeful --------------------------------------------------
+-common/fnpenyusutan : formRincian()
+
+//2016.09.05 Iwan -------------------------------------------------
+- pages.php :tambah case gantirugi,gantirugibayar,gantirugiprogres,gantirugi_cari
+
+//2016.09.05 Chandra ----------------------------------
+> masterdata - ref_tandatangan
+- /var/www/atisisbada_demo_v2/js/master/ref_tandatangan
+> masterdata - ref_kapitalisasi
+- /var/www/atisisbada_demo_v2/pages/master/ref_kapitalisasi
+
+//2016.09.08 chandra ---------------------------------
+> masterdata - ref_gudang
+- /var/www/atisisbada_demo_v2/pages/master/ref_gudang
+> masterdata - ref_pegawai
+- /var/www/atisisbada_demo_v2/common/fnpegawai
+
+//2016.09.09 chandra ---------------------------------
+> ref_kapitalisasi
+- /var/www/atisisbada_demo_v2/pages/master/ref_kapitalisasi
+ 
+
+//2016.09.09 Iwan -------------------------------------------------
+- page/gantirugi/gantirugi.php
+- DB : + field nilai_buku,nilai_susut
+- DB : + sp_jurnal_gantirugi_bayar
+
+
+//2016.09.09 Wita -----------------------------------------------
+> penatausahaan - no gedung. no ruas jalan, kampung, rt, rw
+- common/fnfile.php
+- common/fnpenatausaha.php
+- pages/05/entryidi_lama.php
+- DB : buku_induk + field no_barang, kampung, rt,rw
+
+//2016.09.13 Iwan -------------------------------------------------
+- common/fnpenatausaha.php : 
+> tambah if($formcaribi=='gantirugi_cari'){	$Kondisi .= " and stusul = 0 ";}
+- page/gantirugi/gantirugi.php
+
+//2016.09.13 Chandra ---------------------------------------------
+> ref_skpd_keuangan
+- /var/www/atisisbada_demo_v2/pages/master/ref_skpd_keuangan.php
+
+//2016.09.13 Saeful -------------------------------------------------
+-common/fnpenyusutan 
++fungsi susut_koreksi(), update susut1barang_tasik(), setKolomHeader(), setKolomData 
+-DB : +prosedure sp_jurnal_susut_koreksi, update fungsi sf_susut_mode6
+
+//2016.09.14 Chandra ---------------------------------------------
+> refskpd_urusan
+- /var/www/atisisbada_demo_v2/pages/master/refskpd_urusan.php
+> ref_ruang
+- /var/www/atisisbada_demo_v2/js
+> ref_mapping
+- /var/www/atisisbada_demo_v2/pages/master/refskpd_urusan.php
+
+//2016.09.15 Saeful -------------------------------------------------
+-common/fnpenyusutan : getDaftarOpsi() tambah kondisi sisa_manfaaat !=0
+-DB : update function sf_susut_mode6
+
+
+//20160915 rusyad ---------------------------
+> skpd ajax order by name + kode
+- common/fnskpd.php
+
+//2016.09.15 Iwan -------------------------------------------------	
+> DB 
++ field alamat di tabel penilaian 
+- common/fnkoreksi.php
+- pages/penilaian/penilaian.php
+- js/penilaian/penilaian.js
+
+//2016.09.15 Chandra -----------------------------------------
+> ref_skpd_keuangan
+- /var/www/atisisbada_demo_v2/pages/master/ref_skpd_keuangan
+> ref_std_harga
+- /var/www/atisisbada_demo_v2/pages/master/refstandarharga
+> ref_barang
+- /var/www/atisisbada_demo_v2/pages/master/ref_aset/refbarang
+
+//2016.09.16 Chandra ----------------------------------------
+> ref_skpd
+- /var/www/atisisbada_demo_v2/pages/master/ref_skpd
+- function setform
+
+
+//20160919 rusyad -----------------------------------
+> fmStatusAset
+- common/fnfile.php
+
+
+//2016.09.20 Wita --------------------------------------
+> Penghapusan dipisah dari mutasi/reklas
+- pages/navatas.php
+- pages/09/entrypenghapusan.php
+- common/fnpenghapusan.php
+
+//2016.09.20 Chandra ----------------------------------
+> ref_kapitalisasi
+- form baru
+- filter combo
+>ref_masa_manfaat
+- combo bidang
+>ref_akun
+- combo bidang
+> ref_skpd_keuangan
+- nambah title "1.1.1" di pencarian kode barang
+> ref_kapitalisasi
+- command function kode berurutan
+- saat tampil foem edit,nilai min kapitalisasi jadi muncul
+
+//20160920 rusyad ------------------------
+> t_jurnal tgl create
+ - triger t_Transaksi_bef_ins
+ - triger t_jurnal_aset_aft_del
+ - triger t_jurnal_aset_aft_ins
+ - sf_jurnal_rekap()
+ - sp_jurnal_bi()
+ - sp_jurnal_pemeliharaan()
+ - t_jurnal_aset + tgl_create
+
+//20160921 rusyad ------------------------------------------
+> tgl create
+- sp_jurnal_bi()
+> map
+- pages/map/view_map3.php
+- js/map.js
+> menu atas penghapusan
+- pages/navatas.php
+- pages/09/entrypenghapusan.php
+> menu penghapusan sebagian
+- pages/09/listhapussebagian.php
+- pages/navatas.php
+
+
+//2016.09.21 Wita ---------------------------------------------
+>tgl_create
+- tabel penghapusan : + field tgl_create, uid_created 
+- sp_jurnal_penghapusan
+- sp_jurnal_mutasi
+- sp_jurnal_reklass
+>Tambah tombol penggabungan dan mutasi di penatausahaan
+- common/fnpenatausaha.php : genToolbarBawah()
+- common/fnpenghapusan.php : Penghapusan_TempilForm()
+
+
+//2016.09.22 Wita -------------------------------------------
+>Tombol Penghapusan karena koreksi di penatausahaan
+- common/fnpenatausaha.php : genToolbarBawah()
+- common/fnpenghapusan.php : Penghapusan_TempilForm()
+>Tambah kampung - rt/rw di kib A, C,D,F
+- common/fnpenatausaha.php
+- common/fnfile.php
+
+//2016.09.23 Wita ------------------------------------------------
+>penghapusan, mutasi, reklas, penggabungan,koreksi
+- pages/09/entrypenghapusan.php
+- common/fnpenghapusan.php
+
+// 2016.09.24 chandra --------------------------------------
+> upload master data referensi ke semua server atisisbada
+
+//20160926 rusyad ------------------------------------
+> pengadaan
+- v1_pengadaan
+- v_pengadaan
+
+//20160927 rusyad -------------------------
+> pengadaaan
+- pages\pengadaan\rekapdpb.php
+- pages\pengadaan\rekapdpb_skpd
+
+//20160927 rusyad ------------------------------
+> timeout user login ulang (jika browser ketutup)
+- common\fnuser.php
+- vars.php  + $USER_TIME_OUT2
+> kondisi
+- t_kondisi : + tgl_create, uid_create
+- bi_aft_ins
+- t_kondisi_aft_upd
+- t_kondisi_aft_ins
+- t_kondisi_aft_del
+- fnfile.php penatausahaan_proses()
+
+> daftar buku_induk yg dihapus
+- bi_aft_del
+- buku_induk_del
+
+//20160928 rusyad ----------------------------------------
+> closing 
+- fnfile.php getTglClosing(), sudahClosing()
+
+
+//2016.09.28 Iwan -------------------------------------------------
+- ajaxprs.php
+- common/fnaselainlain.php
+- common/fnhapussebagian.php
+- common/fnkapitalisasi.php
+- common/fnkoreksi.php
+- common/fnpelihara.php
+- common/fnpemanfaat.php
+- common/fnpengamanan.php
+- common/fnpindahtangan.php
+- pages/10/listpindahtangan.php
+- pages/gantirugi/gantirugi.php
+- pages/gantirugi/gantirugibayar.php
+- pages/kondisi/kondisi.php
+- pages/penilaian/penilaian.php
+
+
+//2016.09.29 Wita ---------------------------------------------
+>rekap bi - akuntansi - ajx
+- common/fnpembukuan_1_ajx.php
+- js/pembukuan1ajx.js
+- pages.php : case 'Rekap1', case 'Rekap1_old'
+- js/pembukuan2.js : url : 'pages.php?Pg=Rekap1_old', 
+>Mutasi dan Reklas daftar
+- common/fnpenghapusan.php
+- DB: v_penghapusan_bi tambah nilai_buku, nilai_susut
+
+//2016.09.29 chandra ------------------------------
+> ref_sumberdana
+>> revisi
+- /var/www/atisisbada_demo_v2/pages/master/ref_sumberdana.php
+
+//20160929 rusyad ---------------------------
+> update daftarobj2.GetCbxChecked(), ignore utk id checkbox yg sengaja dihilangkan
+- js/daftarobj.js
+> pemisah ID untuk checkbox daftar dengan multi id/key, $err, $content, $cek tampil di firebug
+- common/daftarobj.php $pemisahID, hapus()
+
+
+//2016.09.30 Wita -------------------------------------------------
+>penatausahaan - form baru - default tahun
+- common/fnfile.php : Penatausahaan_FormEntry()
+
+
+//20160930 rusyad --------------------------
+> rekap perbandingan (LRA) jurnal fisik
+- pages/RLA/perbandingan.php
+> jnstrans
+- vars.php
+
+//2016.10.01 Saeful ---------------------------------------------
+-common/fnrekappenyusutan2.php 
+-pages/penyusutan/jurnalpenyusutan2.php 
+-js/fnrekappenyusutan2.php 
+-js/penyusutan/jurnalpenyusutan2.php
+
+
+//2016.10.03 Iwan --------------------------------------------------
+> DB 
++ trigger pemindahtanganan_aft_upd
+- update trigger pemindahtanganan_aft_ins
+- update trigger pemindahtanganan_aft_del
+- pages/10/listpindahtangan.php
+
+//2016.10.03 Saeful -------------------------------------------------
+-pages.php : ganti isi case 'RekapPenysutan' yang lama menjadi case 'RekapPenyusutanOld
+-ganti file fnrekappenyusutan sebelumnya menjadi rekappenyusutan yang baru.'
+
+
+//20161004 rusyad -----------------------------------------------
+> hapus penatausahaan tgl closing
+- common/fnfiles.php
+
+//20161004 Wita -------------------------------------------------------
+>rekapi bi - akuntansi ajx - filter
+- common/fnpembukuan_1_ajx.php
+- js/pembukuan1ajx.js
+
+//20161005 Wita ------------------------------------------------------
+>filter cbx Rincian
+- common/fnpembukuan_1_ajx.php
+- js/pembukuan1ajx.js
+>penatausahaan - fmFiltTglBtw_tgl2
+- common/fnpenatausaha.php
+
+
+//2016-10-05 rusyad ----------------------------------
+> penatausahaan tampil daftar, tunggu sampai pilih subunit atau tampilkan
+- listbi.php
+
+//2016-10-07 rusyad -----------------------------------------
+> penataushaan - hapus : tambah errmsg jika query hapus gagal
+- fnfile.php
+> di bag get kode rekap ada staset tambahan
+- sp_jurnal_mutasi, sp_jurnal_penghapusan
+
+//2016-10-10 Saeful ------------------------------------------
+-common/fnpenyusutan.php : genFormSusut(), genFormSusutSatu(), batalSusut(), Hapus()
+
+//20161014 chandra --------------------------------------
+> reftambahmanfaat
+- /var/www/atisisbada_demo_v2/pages/master/reftambahmanfaat.php
+
+
+//20161018 rusyad ----------------------------------------
+> togler - cetak
+- common/fnfile.php
+> export hal : exportExcel(2) 2--> untuk halaman
+- daftarobj.php
+- daftarobj.js
+
+
+//20161018
+> gensumhal()
+- fnpenatausahaan.php
+
+//2016-10-18 Wita
+>tombol cetak kertas kerja di sensus
+- common/fnfile.php
+
+//2016-10-20 chandra --------------------------
+> ref_lra
+- /var/www/atisisbada_demo_v2/pages/master/ref_lra.php
+- tampilan berdasarkan tahun
+> ref_tambahmanfaat
+- /var/www/atisisbada_demo_v2/pages/master/reftambahmanfaat.php
+- data dgn kodebarang yg sama tidak bisa disimpan
+
+//2016.10.20 Iwan --------------------------------------------------
+-pages/gantirugi/gantirugi.php
+-js/gantirugi/gantirugi.js
+
+
+//20161020 rusyad ----------------------------------------------------
+> js/daftarobj.js
+
+//2016-10-21 chandra --------------------------------------
+> ref_barang
+- /var/www/atisisbada_demo_v2/pages/master/ref_aset/ref_barang.php
+- validasi edit sdh dipakai di buku induk
+
+
+
+//20161022 rusyad -----------------------------------
+> renderDaftarAfter()
+- daftarobj.js
+- sensus.js
+> total harga daftar
+- fnsensus.php
+> pilih skpd di sensus
+- skpd.js
+
+
+//2016.10.26 Iwan --------------------------------------------------
+- common/fnasetlainlain.php
+- common/fnhapussebagian.php
+- common/fnkapitalisasi.php
+- common/fnpemanfaat.php
+- common/fnpelihara.php
+- common/fnpengaman.php
+- pages/penilaian/penilaian.php
+- pages/gantirugi/gantirugi.php
+- update trigger gantirugi_aft_upd
+- update trigger gantirugi_aft_ins
++ store function sf_jurnal_susut_pemanfaatan
+
+//2016.10.28 chandra -------------------------------------
+refprogram
+/var/www/atisisbada_demo_v2/js/master/refprogram
+/var/www/atisisbada_demo_v2/js/master/refprogram
+
+
+//20161031 rusyad --------------------------------------
+> karakter yg boleh/tidak boleh di entry di penatausahaan baru/edit
+- common/fnfile.php Penatausahaan_Proses()
+
+
+//2016.11.02 wita -------------------------------------------------
+>penatausahaan - filter program, no bast belum diisi
+- pages/05/entryidi_lama.php
+- common/fnfile.php
+- common/fnpenatausaha.php
+
+//2016.11;02 Saeful ----------------------------------------------------
+-common/fnpenyusutan.php susut_koreksi_semester(), susutSatu(), susut1barang_cirebon()
+-DB : sf_susut_mode8
+
+//2016.11.03 Wita -------------------------------------------------
+>penatausahaan - edit - program kegiatan
+- common/fnfile.php : Penatausahaan_FormEntry
+
+
+//2016.11.04 Wita ------------------------------------------------------------
+>sudahClosing ditambah parameter c,d,e,e1
+- common/fnfile.php
+
+//2016.11.04 Iwan --------------------------------------------------
+- DB 
++ sf_jurnal_susut_gantirugi
++ sf_jurnal_susut_pindahtangan
+- pages/10/listpindahtangan.php
+- pages/navatas.php
+
+//2016.11.04 Iwan --------------------------------------------------
+- pages/navatas.php
+- common/vars_def.php ; tambah $Main->MODUL_PEMUSNAHAN
+
+//2016.11.09 Iwan --------------------------------------------------
+- pages/base_main.php : ?Pg=10 ganti jadi ?Pg=10&bentuk=1&SSPg=
+- common/fnpindahtangan.php 
+- pages/navatas.php
+- pages/pemusnahan.php
+- pages/pemusnahanba.php
+- pages/pemusnahan_det.php
+- js/pemusnahan_det.js
+
+//2016.11.07 Wita ------------------------------------------------------
+>sf_isi_bi_thn tidak bisa
+- DB : sf_isi_bi_thn 
+
+>mutasi barang ada no polisi - validasi
+- common/fnfile.php
+
+//2016.11.09 Wita ------------------------------------------------------
+>penatausahaan - ATB - rincian harga
+- common/fnfile.php
+
+//2016.11.10 Wita -------------------------------------------------------
+- common/fnfile.php
+- js/ruang.js
+
+
+//2016.11.15 Iwan --------------------------------------------------
++ store procedure sp_jurnal_pemusnahan
+
+//2016.11.16 Iwan --------------------------------------------------
+- common/daftarobj.php : tambah htmlspecialchars($cek) di function genSumHal
+
+2016-11-17 rusyad ---------------------------------------
+> perencanaan
+- pages/perencanaan/rka.php
+- pages/perencanaan/fndkb.php
+> daftar obj 
++ setting property di selector(), 
++ kondisi jika setkolomdata tidak ada data ($kolom==null) maka baris tidak ditampilkan , genDaftar()
+- daftarobj.php , selector()
+
+//2016.11.21 Iwan --------------------------------------------------
+- pages/perencanaan/fnrkb.php
+- pages/perencanaan/fnrkpb.php
+- js/perencanaan/rkb.js
+- js/perencanaan/rpebmd.js
+- js/perencanaan/rphbmd.js
+
+//2016.11.25 Iwan --------------------------------------------------
+- _DOC/_DFD/PEMELIHARAAN
+- common/fnpelihara.php : tambah function checkedMM
+- common/fnpenatausaha.php : tambah function checkedMM
+- pages/base.php : tambah function checkedMM
+
+//2016.11.28 Iwan --------------------------------------------------
+- common/fnpenerimaan.php :edit function setNavAtas
+- common/fnpengeluaran.php :edit function setNavAtas, tambah $dt['tahun'] = $_COOKIE['coThnAnggaran']; di function setFormBaru
+- common/fnrekap_penerimaan.php :edit function setNavAtas
+- common/fnrekap_pengeluaran.php :edit function setNavAtas
+- common/fnkoreksi.php
+
+//2016.11.28 Wita ---------------------------------------------------
+> akuntansi - level barang
+- common/fnpembukuan_3_ajx.php
+
+//2016.11.29 Wita -----------------------------------------------------
+- common/fnpembukuan_3_ajx.php
+- common/fnjurnal.php
+
+//2016.12.09 Wita ----------------------------------------------------
+>penatausahaan - Program&kegiatan
+- common/fnfile.php
+- pages/master/refprogram.php
+
+//2016.12.13 Iwan --------------------------------------------------
+- common/fnpenatausahaan.php : PemanfaatSimpan= new AjxSimpanObj-> hapus parameter,'fmTANGGALPEROLEHAN'
+
+//20161215 rusyad --------------------------------------------------
+> rekap bi/mutasi/mutasi det daftar, cetak, excel disamakan dengan jabar 
+- fnfile.php
+- pages/05/rekap_mutasi.php
+- pages/05/rekap_mutasi2.php
+- pages/cetak/rekap_mutasi_cetak.php
+- pages/cetak/rekap_mutasi_cetak2.php
+
+//2016.12.17 Wita ---------------------------------------------------------
+>KIB D - tampil Ruas Jalan , Daerah Irigasi dan nama jembatan
+- common/fnpenatausaha.php
+
+//2016.12.21 Saeful --------------------------------------------------------
+>update penyusutan
+-common/fnpenyusutan.php : comptible dengan demo
+-DB : sf_susut_mode3_thn, sf_susut_mode3_bln
+
+//2016.12.23 Iwan --------------------------------------------------
+- pages/navatas.php
+- pages/gantirugi/gantirugibayar.php
+- pages/gantirugi.php
+- pages/base_main.php : ?Pg=10 ganti jadi ?Pg=10&bentuk=&SSPg=
+
+
+//2016.12.27 Iwan --------------------------------------------------
+- common/fnpindahtangan.php
+- common/fnpelihara.php
+
+//2016.12.29 Wita ---------------------------------------------------------------
+>filter tahun rekap bi, filter ruas jalan dan tampilan nm_jembatan
+- common/fnpembukuan_1_ajx.php
+- common/fnpenatausaha.php
+
+//2016.12.30 Wita ----------------------------------------------------
+>menghilangkan rekap bi 2
+- common/fnjurnal.php,fnpembukuan_1_ajx.php,fnpembukuan_2_ajx.php,fnpembukuan_3_ajx.php
+>cek tombol penggabungan,mutasi,koreksi
+- pages/09/penghapusanForm.php
+- common/fnpenatausaha.php : genToolbarBawah()
+>penghapusan penggabungan - tampilkan dan edit
+- pages/09/entrypenghapusan.php
+
+//2017.01.09 Saeful -------------------------------------------------
+-common/fnpenatausaha.php : genList()->tambah if kondisi untuk set $operTahun, genSumHal() menambahkan jumlah pemeliharaan dll
+
+//2016.01.18 Wita -------------------------------------
+>filter status recon
+- common/vars_def.php : $Main->STATUS_SURVEY = 0; (buat tes aja)
+- common/fnpenatausaha.php : getDaftarOpsi()
+
+//2017.01.31 Saeful -------------------------------------------------
+- common/fnpenyusutan.php
+- common/fnpenatausaha : bagian penyusutan
+
+//2017.02.01
+update database
+bi_kib_a_tmp,bi_kib_b_tmp,bi_kib_c_tmp,bi_kib_d_tmp,bi_kib_e_tmp,bi_kib_f_tmp,bi_kib_g_tmp
+v_bi_kib_a_tmp,v_bi_kib_b_tmp,v_bi_kib_c_tmp,v_bi_kib_d_tmp,v_bi_kib_e_tmp,v_bi_kib_f_tmp,v_bi_kib_g_tmp
+- insert_bi_kibv4.php
+
+//2017.02.13 Iwan --------------------------------------------------
+- pages/07/listpelihara.php
+- common/fnpelihara.php
+- common/fnfile.php : di function createEntryTgl tambah case 2 :{//tahun tanpa combo dan readonly
+- ajaxprs.php : edit case 'PeliharaForm' 
+
+//2017.02.17 Wita -----------------------------------------------------
+>Penatausahaan - menu ekstra
+- pages/navatas.php
+>penghapusan,mutasi,reklas,penggabungan,koreksi
+- common/fnpengahpusan.php
+- DB:update v_penghapusan_bi (data backup nya v_penghapusan_bi_20170217), update isi penghapusan.nilai_buku data lama dengan get_nilai_buku()
+
+//2017.02.20 Wita ----------------------------------------------------------
+>Penatausahaan - Nama Barang
+- common/fnpenatausaha.php
+>penatausahaan - penyusutan - rincian
+- common/fnfile.php : Penatausahaan_genTableRowDet()
+
+//2017.02.21 Wita --------------------------------------------------------
+>upload ulang
+- common/fnpenatausaha.php : genList()
+
+//2017.02.23 Wita --------------------------------------------------------
+>rekap mutasi - aset lainlain
+- common/fnpembukuan_3_ajx_2.php
+- common/fnjurnal.php : rekapMutasi()
+
+//2017.02.25 Wita --------------------------------------------------------
+>Penggabungan & koreksi & simpan nilai_buku
+- common/fnpenghapusan.php : Penghapusan_Proses(), Penghapusan_TampilForm()
+
+//2017.02.27 Wita --------------------------------------------------------
+>Cek Closing penghapusan,penggabungan,mutasi,reklas,koreksi
+- common/fnpenghapusan.php : Penghapusan_Proses()
+
+
+//2017.03.03 Iwan --------------------------------------------------
+- common/fnpelihara.php
+- common/fnpenatausaha.php : tambah parameter fmNOMORba di PeliharaSimpan= new AjxSimpanObj
+- tambah field no_bast di tabel pemeliharaan
+
+
+//2017.03.07 Iwan --------------------------------------------------
+- ajaxprs.php :edit case 'PemanfaatList2'
+- common/fnkoreksi.php
+- common/fnpemanfaat.php
+- common/vars.php :$Main->ArBentukManfaat
+
+//2017.03.09 Wita ------------------------------------------------------
+>penatauahaan - cek no mesin,rangka, dll
+- common/fnfile.php : Penatausahaan_Proses()

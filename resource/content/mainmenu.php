@@ -1,9 +1,26 @@
+<?php
+$baseurl = $_COOKIE['baseurl'];
+$basedir = $_COOKIE['basedir'];
+include('$basedir/framework/config.php');
+echo "
+    <script language='JavaScript' src='$baseurl/js/ajaxc2.js' type='text/javascript'></script>
+    <script language='JavaScript' src='$baseurl/dialog/dialog.js' type='text/javascript'></script>
+    <script language='JavaScript' src='$baseurl/js/global.js' type='text/javascript'></script>
+    <script language='JavaScript' src='$baseurl/js/base.js' type='text/javascript'></script>
+    <script language='JavaScript' src='$baseurl/js/encoder.js' type='text/javascript'></script> 
+    <script language='JavaScript' src='$baseurl/lib/chatx/chatx.js' type='text/javascript'></script>
+    <script src='$baseurl/js/daftarobj.js' type='text/javascript'></script>
+    <script src='$baseurl/js/pageobj.js' type='text/javascript'></script>   ";
+echo "<script type='text/javascript' src='$baseurl/js/aksi/aksi.js'></script>";
+?>
+
+
 <div class="col-wd-12 animated flipInX">
 	<nav>
 		<ul class="mainmenu"> 
 			<a href="index.php"><li><i class="fa fa-home"></i> Beranda</li></a>
 			<a href="index.php?page=tentangkami"><li><i class="fa fa-info-circle"></i> Tentang Kami</li></a>
-			<a href="#"><li><i class="fa fa-phone-square"></i> Kontak</li></a>
+			<a href="index.php?page=Kontak"><li><i class="fa fa-phone-square"></i> Kontak</li></a>
 			<a href="index.php?page=cara-belanja"><li><i class="fa  fa-mouse-pointer"></i> Cara Berbelanja</li></a>
 		</ul>
         <?php 
@@ -13,6 +30,7 @@
                 echo'<a href="profile.php">
                         <div class="login">
                             <i class="fa fa-user"></i> '.$_SESSION[user].' 
+                            
                         </div>
                     </a>';
             }

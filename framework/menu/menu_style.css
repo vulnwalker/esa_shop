@@ -1,0 +1,100 @@
+#menu {
+	float:left;
+	width:100%;
+	background:#efeff1;
+	font-size:93%;
+	line-height:normal;
+	
+	/*height:42; border-bottom:1px solid #666;*/
+	
+	}
+#menu ul {
+	margin:0;
+	padding:20px 10px 0 30px;
+	list-style:none;
+	}
+#menu li {
+	display:inline;
+	margin:0;
+	padding:0;
+	}
+#menu a {
+	float:left;
+	/*background:url("images/tableftF.gif") no-repeat left top;*/
+	margin:0 0 0 4;
+	padding:0 0 0 4px;
+	/*text-decoration:none;*/
+	/*background: #ffffff;*/
+	background-color: #D8DFEA;
+	border: 0.1em solid #D8DFEA;
+	color: #3B5998;
+	
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	height: 24px;
+}
+
+#menu a span {
+	/*padding:0 0 0 30; background-repeat:no-repeat;
+	background-image:url(images/administrator/images/copy_f2.png);*/
+				
+	float:left;
+	display:block;
+	/*background:url("images/tabrightF.gif") no-repeat right top;*/
+	padding:5px 15px 4px 6px;
+	/*color:#666;*/
+	}
+	
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#menu a span {
+	/*padding:0 0 0 30; background-repeat:no-repeat;
+	background-image:url(images/administrator/images/copy_f2.png);*/
+	float:none;
+}
+/* End IE5-Mac hack */
+#menu a:hover span {
+	
+	/*color:#FFFFFF;*/
+}
+#menu a:hover {
+	background-position:0% -42px;
+	background-color: #627AAD;
+	border-color: #627AAD;
+	color:#FFFFFF;
+}
+#menu a:hover span {
+	background-position:100% -42px;
+}
+
+
+#menuaktif a{
+	float:left;
+	/*background:url("images/tableftF.gif") no-repeat left top;*/
+	margin:0 0 0 4;
+	padding:0 0 0 4px;
+	/*text-decoration:none;*/
+	/*background: #ffffff;*/
+	background-color: #ffffff;
+	
+	border-bottom-color: white;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	color: #000;	
+}
+
+#menuaktif a:hover {
+	float:left;
+	/*background:url("images/tableftF.gif") no-repeat left top;*/
+	margin:0 0 0 4;
+	padding:0 0 0 4px;
+	/*text-decoration:none;*/
+	/*background: #ffffff;*/
+	background-color: #ffffff;
+	border: 0.1em solid #D8DFEA;
+	border-bottom-color: white;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	color: #000;
+	text-decoration:none;
+}

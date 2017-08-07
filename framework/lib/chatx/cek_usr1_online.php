@@ -1,0 +1,1 @@
+<?phpinclude ('../../config.php');$usr1 = $_GET['uid'];$hsl='';$Kondisi = " where uid='".$usr1."' and online=1 					and TIMESTAMPDIFF(MINUTE,lastaktif,now()) < ".$USER_TIME_OUT;$qry = mysql_query("select * from admin $Kondisi ");if( mysql_num_rows($qry)>0){	$hsl = '1';}echo $hsl;?>

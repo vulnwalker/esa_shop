@@ -1,0 +1,745 @@
+<?php
+
+class RekonhitungObj  extends DaftarObj2{	
+	var $Prefix = 'Rekonhitung';
+	var $elCurrPage="HalDefault";
+	var $SHOW_CEK = TRUE;
+	var $TblName = 'Rekonhitung'; //daftar
+	var $TblName_Hapus = 'Rekonhitung';
+	var $MaxFlush = 10;
+	var $TblStyle = array( 'koptable', 'cetak','cetak'); //berdasar mode
+	var $ColStyle = array( 'GarisDaftar', 'GarisCetak','GarisCetak');
+	var $KeyFields = array('id');//('p','q'); //daftar/hapus
+	var $FieldSum = array();//array('jml_harga');
+	var $SumValue = array();
+	var $FieldSum_Cp1 = array( 14, 13, 13);//berdasar mode
+	var $FieldSum_Cp2 = array( 1, 1, 1);	
+	var $checkbox_rowspan = 2;
+	var $PageTitle = 'Cetak Surat';
+	var $PageIcon = '';
+	var $pagePerHal ='';
+	var $fileNameExcel='Rekonhitung.xls';
+	var $Cetak_Judul = 'Cetak Surat';	
+	var $Cetak_Mode=2;
+	var $Cetak_WIDTH = '30cm';
+	var $Cetak_OtherHTMLHead;
+	var $FormName = 'RekonhitungForm';	
+	var $WITH_HAL=FALSE;
+	var $TampilFilterColapse = 0; //0
+	
+	function setPage_OtherScript(){
+		$scriptload = 
+					"<script>
+						$(document).ready(function(){ 
+							".$this->Prefix.".loading();
+						});
+						
+					</script>";
+					
+		return 
+			"<script type='text/javascript' src='js/rekon/".strtolower($this->Prefix).".js' language='JavaScript' ></script>".
+			$scriptload;
+	}
+		
+	function setTitle(){
+		return '';
+	}
+	
+	function setMenuEdit(){		
+		return
+		"";
+	}
+	
+	function setMenuView(){
+		return 
+		"";
+	}
+	
+	function genDaftarOpsi(){
+		global $Ref, $Main;
+		return array('TampilOpt'=>$TampilOpt);
+	}		
+	
+	
+	function setPage_HeaderOther(){
+		return 
+			"";
+	}	
+		
+	function set_selector_other($tipe){
+		global $Main;
+		$cek = ''; $err=''; $content=''; $json=TRUE;
+		$cbid = $_REQUEST[$this->Prefix.'_cb'];
+		$this->form_idplh = $cbid[0];
+		switch($tipe){	
+			case 'cetakhitung':{		
+				$json= FALSE;
+				$this->cetakhitung();							
+			break;
+			}
+						
+		 	/*default:{
+				$other = $this->set_selector_other2($tipe);
+				$cek = $other['cek'];
+				$err = $other['err'];
+				$content=$other['content'];
+				$json=$other['json'];
+		 	break;
+		 	}*/
+			
+		 }
+			
+		return	array ('cek'=>$cek, 'err'=>$err, 'content'=>$content, 'json'=>$json);
+    }	
+	
+	function cetakhitung(){
+		$width='21cm';
+		$height='33cm';
+		$font_size='11';
+		$isi_head ="<title>$Main->Judul</title>
+				<!--<link rel=\"stylesheet\" href=\"css/template_css.css\" type=\"text/css\" />-->
+				<style>
+table.rangkacetak {
+	background-color: #FFFFFF;
+	margin: 0cm;
+	padding: 0px;
+	border: 0px;
+	width: 30cm;
+	border-collapse: collapse;
+	font-family : Arial, Helvetica, sans-serif;
+	
+}
+table.rangkacetak td {
+	font-size:6pt;
+}
+table.cetak {
+	background-color: #FFFFFF;
+	font-family : Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid;
+	width: 30cm;
+	border-collapse: collapse;
+	color: #000000;
+	font-size : 6pt;
+}
+table.cetak th.th01 {
+	margin: 0px;
+	padding: 0px;	
+	border: 1px solid #000000;
+	font-size : 6pt;
+	color: #000000;
+	text-align: center;
+	background-color: #FFFFFF;
+}
+table.cetak th.th02 {
+	margin: 0px;
+	padding: 2px;	
+	border: 1px solid #000000;
+	font-size : 6pt;
+	color: #000000;
+	text-align: center;
+	background-color: #FFFFFF;
+}
+table.cetak tr.row0 {
+	background-color: #EBEBEB;
+	text-align: left;
+	border: 1px solid #000000;
+}
+table.cetak td {
+	font-size:6pt;
+	border: 1px solid #000000;
+}
+table.cetak input {
+	font-family: Arial Narrow;
+	font-size: 10pt;
+}
+				</style>";
+				$border_bottom="align='right' style='border-bottom:1px solid;'";
+		$isi_body="
+			<table border='0' class='rangkacetak' style='width:100%;' >
+				<tr>
+					 <td align='center'><b>PEMERINTAH KABUPATEN GARUT</b></td>
+				</tr>
+				<tr>
+					 <td align='center'><b>REKONSILIASI ASET TETAP</b></td>
+				</tr>
+				<tr>
+					 <td align='center'><b>.............................................................................................</b></td>
+				</tr> 				
+			</table>
+			<br>						
+			<table border='0' class='cetak' style='width:100%;' >	
+				<tr >
+					<th class='th01' rowspan='8' width='200'>Nama Aset Tetap</th>
+					<th class='th02' colspan='2' width='150'>SALDO AWAL 1 JANUARI 2015</th>
+					<th class='th01' colspan='2' width='150'>MUTASI MTS I</th>
+					<th class='th01' rowspan='2' width='75'>PERHITUNGAN MENURUT SKPD</th>									
+					<th class='th02' colspan='3' width='225'>NILAI ASET PER 30 JUNI 2015 (HASIL REKONSILIASI)</th>
+					<th class='th01' rowspan='2' width='75'>PERHITUNGAN MENURUT REKON</th>									
+					<th class='th01' rowspan='2' width='75'>KOREKSI PENAMBAHAN (PENGURANGAN)</th>									
+					<th class='th02' colspan='3' width='225'>MUTASI MTS II</th>
+					<th class='th01' rowspan='2' width='100'>Saldo 31/12/2015</th>									
+				</tr>
+				<tr>
+					<th class='th02' width='75'>BARANG PRODUKTIF</th>
+					<th class='th02' width='75'>BARANG TIDAK PRODUKTIF/IDLE</th>
+					<th class='th01' width='75'>Penambahan</th>
+					<th class='th01' width='75'>Pengurangan</th>
+					<th class='th01' width='75'colspan='2'>PRODUKTIF</th>
+					<th class='th01' width='75'>TIDAK PRODUKTIF/IDLE</th>
+					<th class='th01' width='75'>Penambahan</th>
+					<th class='th01' width='150' colspan='2'>Pengurangan</th>
+				<tr>
+				<tr>
+					<th class='th01' width='75'></th>
+					<th class='th01' width='75'></th>
+					<th class='th01' width='75'></th>
+					<th class='th01' width='75'></th>
+					<th class='th01' width='75'></th>
+					<th class='th01' width='75'></th>
+					<th class='th01' width='75'></th>
+					<th class='th01' width='75'></th>
+					<th class='th01' width='75'></th>
+					<th class='th01' width='75'></th>
+					<th class='th01' width='75'></th>
+					<th class='th01' width='75'>Penghapusan</th>
+					<th class='th01' width='75'>Reklas</th>
+					<th class='th01' width='75'></th>
+				<tr>
+				<tr>
+					<th class='th01' width='75'>NP</th>
+					<th class='th01' width='75'>NP</th>
+					<th class='th01' width='75'>NW</th>
+					<th class='th01' width='75'>NP</th>
+					<th class='th01' width='75'>NP</th>
+					<th class='th01' width='75'>NP</th>
+					<th class='th01' width='75'>NW</th>
+					<th class='th01' width='75'>NP</th>
+					<th class='th01' width='75'>NP</th>
+					<th class='th01' width='75'>NP</th>
+					<th class='th01' width='75'>NW</th>
+					<th class='th01' width='75'>NW</th>
+					<th class='th01' width='75'>NW</th>
+					<th class='th01' width='75'>NW</th>
+				<tr>
+				<tr>
+					<th class='th01' width='75'>(1)</th>
+					<th class='th01' width='75'>(2)</th>
+					<th class='th01' width='75'>(3)</th>
+					<th class='th01' width='75'>(4)</th>
+					<th class='th01' width='75'>(5)<br>=(1)+(2)+(3)+(4)</th>
+					<th class='th01' width='75'>(6)</th>
+					<th class='th01' width='75'>(7)</th>
+					<th class='th01' width='75'>(8)</th>
+					<th class='th01' width='75'>(9)<br>=(6)+(8)</th>
+					<th class='th01' width='75'>(10)<br>=(9)-(5)</th>
+					<th class='th01' width='75'>(11)</th>
+					<th class='th01' width='75'>(12)</th>
+					<th class='th01' width='75'>(13)</th>
+					<th class='th01' width='75'>(14)<br>=(7)+(11)-(12)-(13)</th>
+				<tr>
+				<tr >
+					<td width='200'>Tanah</td>
+					<td width='75' align='right'></td>
+					<td width='75' align='right'></td>
+					<td width='75' align='right'></td>				
+					<td width='75' align='right'></td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='center'>0</td>
+					<td width='75' align='center'></td>
+					<td width='75' align='center'></td>
+					<td width='75' align='center'></td>
+					<td width='75' align='right'>-</td>
+				</tr>
+				<tr >
+					<td width='200'>Peralatan dan Mesin</td>
+					<td width='75' align='right'></td>
+					<td width='75' align='right'></td>
+					<td width='75' align='right'></td>				
+					<td width='75' align='right'></td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='center'>0</td>
+					<td width='75' align='center'></td>
+					<td width='75' align='center'></td>
+					<td width='75' align='center'></td>
+					<td width='75' align='right'>-</td>				
+				</tr>
+				<tr >
+					<td width='200'>Gedung dan Bangunan</td>
+					<td width='75' align='right'></td>
+					<td width='75' align='right'></td>
+					<td width='75' align='right'></td>				
+					<td width='75' align='right'></td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='center'>0</td>
+					<td width='75' align='center'></td>
+					<td width='75' align='center'></td>
+					<td width='75' align='center'></td>
+					<td width='75' align='right'>-</td>				
+				</tr>
+				<tr >
+					<td width='200'>Jalan/Jembatan,Jaringan, dan Irigasi</td>
+					<td width='75' align='right'></td>
+					<td width='75' align='right'></td>
+					<td width='75' align='right'></td>				
+					<td width='75' align='right'></td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='center'>0</td>
+					<td width='75' align='center'></td>
+					<td width='75' align='center'></td>
+					<td width='75' align='center'></td>
+					<td width='75' align='right'>-</td>				
+				</tr>
+				<tr >
+					<td width='200'>Aset Tetap Lainnya</td>
+					<td width='75' align='right'></td>
+					<td width='75' align='right'></td>
+					<td width='75' align='right'></td>				
+					<td width='75' align='right'></td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='center'>0</td>
+					<td width='75' align='center'></td>
+					<td width='75' align='center'></td>
+					<td width='75' align='center'></td>
+					<td width='75' align='right'>-</td>			
+				</tr>
+				<tr >
+					<td width='200'>KDP</td>
+					<td width='75' align='right'></td>
+					<td width='75' align='right'></td>
+					<td width='75' align='right'></td>				
+					<td width='75' align='right'></td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='center'>0</td>
+					<td width='75' align='center'></td>
+					<td width='75' align='center'></td>
+					<td width='75' align='center'></td>
+					<td width='75' align='right'>-</td>				
+				</tr>
+				<tr >
+					<td width='200' align='right'></td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>				
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>
+					<td width='75' align='right'>-</td>					
+				</tr>
+			</table>
+			<br>
+			<table border='0' class='rangkacetak' style='width:100%;' >
+				<tr>
+					 <td >Penjelasan:</td>
+				</tr>
+				<tr>
+					 <td width='260'><i>Cara 1:***</i></td>
+					 <td width='85' ></td>
+					 <td width='80' ></td>
+					 <td width='100'></td>
+					 <td width='250'><i>Cara 2:</i></td>
+					 <td width='100' ></td>
+					 <td width='400'></td>
+				</tr>				
+				<tr>
+					 <td ><b>Saldo awal 1 Januari 2015</b></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td >Nilai wajar aset tetap per 30 Juni 2015</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td ><b>Aset Produktif Per 1 Januari 2015</b></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td >Mutasi 1 Juli sampan dengan 30 DESEMBER 2015</td>
+					 <td $border_bottom>-</td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Tanah</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td >Jumlah aset tetap 31 DESEMBER 2015</td>
+					 <td $border_bottom>-</td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Peralatan dan Mesin</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Gedung dan Bangunan</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Jalan/Jembatan, Jaringan dan Instalasi</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Aset Tetap Lainnya</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Konstruksi dalam Pengerjaan</td>
+					 <td $border_bottom>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td ><b>Jumlah Aset Produktif</b></td>
+					 <td ></td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td ><b>Aset Tidak Produktif Per 1 Januari 2014</b></td>
+					 <td align='right'></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Tanah</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Peralatan dan Mesin</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Gedung dan Bangunan</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Jalan/Jembatan, Jaringan dan Instalasi</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Aset Tetap Lainnya</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Konstruksi dalam Pengerjaan</td>
+					 <td $border_bottom>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td ><b>Jumlah Aset tidak Produktif</b></td>
+					 <td ></td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td ><i>Koreksi penambahan (pengurangan)</i></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr><tr>
+					 <td  colspan='2'>Penyesuaian nilai perolehan menurut SKPD dengan hasil rekonlisilliasi *</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Kenaikan (penurunan) aset tetap akibat penilaian**</td>
+					 <td ></td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Aset tidak produktif per 30 Juni 2015</td>
+					 <td ></td>
+					 <td $border_bottom>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td  colspan='2'><b>Saldo awal Aset Tetap Per 1 Januari 2015 setelah koreksi</b></td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Mutasi 1 Januari-31 Oktober 2015 :</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Tanah</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Peralatan dan Mesin</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Gedung dan Bangunan</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Jalan/Jembatan, Jaringan dan Instalasi</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Aset Tetap Lainnya</td>
+					 <td align='right'>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >Konstruksi dalam Pengerjaan</td>
+					 <td $border_bottom>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td ><b>Jumlah Mutasi</b></td>
+					 <td ></td>
+					 <td $border_bottom>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td ><b>Saldo Akhir Aset Tetap Per 31 Desember 2015</b></td>
+					 <td ></td>
+					 <td $border_bottom>-</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >]</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >keterangan :</td>
+					 <td ></td>
+					 <td ></td>
+					 <td >Mengetahui,</td>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+				</tr>
+				<tr>
+					 <td >)* lihat kolom 10</td>
+					 <td ></td>
+					 <td ></td>
+					 <td colspan='2'>Kasubag Keuangan/Pengurus Barang</td>
+					 <td colspan='2'>Kepala Bidang Pengelolaan Aset Selaku Pembantu Pengelola Barang</td>
+				</tr>
+				<tr>
+					 <td >)** kolom 7 minus kolom 6</td>
+					 <td ></td>
+					 <td ></td>
+					 <td colspan='2'></td>
+					 <td colspan='2'></td>
+				</tr>
+				<tr>
+					 <td >)*** rincian dapat dilihat pada lampiran 1</td>
+					 <td ></td>
+					 <td ></td>
+					 <td colspan='2'></td>
+					 <td colspan='2'></td>
+				</tr>
+				<tr>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td colspan='2'>.............</td>
+					 <td colspan='2'>H. AYI ROSYAD, S.IP M.Si.</td>
+				</tr>
+				<tr>
+					 <td ></td>
+					 <td ></td>
+					 <td ></td>
+					 <td colspan='2'>NIP</td>
+					 <td colspan='2'>NIP. 197207071999011001</td>
+				</tr>
+			</table>	
+				";
+		$isi="<html>
+				<head>
+					$isi_head
+				</head>
+				<body>
+					$isi_body
+				</body>
+			  </html>
+				";			
+		
+		echo "<div>$isi</div>";
+		//echo "<div style='width:$width;height:$height;'>$isi</div>";
+	}
+		
+	/*function setCetak_Header($Mode=''){
+		global $Main, $HTTP_COOKIE_VARS;
+		return
+			$Main->kopLaporan= 
+					"<table border='0' class='rangkacetak' style='width:100%;'>
+						<tr>
+						 <td>
+						 	<span style='font-size:12;'><b>KEMENTRIAN ENERGI DAN SUMBERDAYA MINERAL</b></span><br>
+						 	<span style='font-size:14;'><b>BADAN GEOLOGI</b></span><br>
+						 	<span style='font-size:14;'><b>SEKRETARIAT BADAN GEOLOGI</b></span><br>
+							<span style='font-size:14;'>Jl. Diponegoro No.57 Bandung
+						 </td>
+						 <td width=43%>	
+						 	<span style='font-size:8;'>LAMPIRAN I</span><br>
+						 	<div style='text-align:justify;text-justify:auto;'>
+						    	<span style='font-size:8;'>PERATURAN MENTERI KEUANGAN REPUBLIK INDONESIA NOMOR 113/PMK.05/2012 TENTANG PERJALAN DINAS JABATAN DALAM NEGERI BAGI PEJABAT NEGARA ,PEGAWAI NEGERI DAN PEGAWAI TIDAK TETAP</span>
+						 	</div>
+						 </td>
+						</tr>
+					</table>";
+	}  */	
+			
+}
+$Rekonhitung = new RekonhitungObj();
+?>

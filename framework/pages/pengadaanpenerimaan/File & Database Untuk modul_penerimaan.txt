@@ -1,0 +1,53 @@
+Modul Penerimaan
+
+File
+	- UPDATE
+		- common/vars.php
+		- common/vars_def.php
+		- common/daftarobj.php
+		- pages.php
+	
+	- pages/pencarian/*
+	- pages/pengadaanpenerimaan/*
+	- js/pencarian/*
+	- js/pengadaanpenerimaan/*
+Database
+	- Table
+		- admin
+		- buku_induk (c1,c,d,e,e,e1,f1,f2,f,g,h,i,j,refid_terima,refid_terima_det
+		- kib_a
+		- kib_b
+		- kib_c
+		- kib_d
+		- kib_e
+		- kib_f
+		- kib_g
+		- ref_barang (f1,f2,f,g,h,i,j,kodeawal)
+		- ref_dokumensumber
+		- ref_nomor_dokumen
+		- ref_pangkat
+		- ref_penerimabarang
+		- ref_penyedia
+		- ref_program
+		- ref_rekening
+		- ref_rincian_template
+		- ref_skpd (c1,c,d,e,e1)
+		- ref_sumber_dana
+		- ref_tandatangan
+		- ref_template
+		- t_atribusi
+		- t_atribusi_rincian
+		- t_distribusi
+		- t_penerimaan_barang
+		- t_penerimaan_barang_det
+		- t_penerimaan_rekening
+		- t_pengaturan
+		- ref_penerimaan_tandatangan		
+	- View
+		- v_penerimaan_barang_det
+		- v1_penerimaan_atribusi
+		- v1_penerimaan_barang_cari
+		- v1_penerimaan_barang_rekening
+	- Function
+		- sf_penerimaan_posting
+		- sf_penerimaan_posting_noreg

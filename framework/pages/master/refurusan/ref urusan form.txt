@@ -1,0 +1,21 @@
+php
+Set Form
+'kode_urusan' => array( 
+								'label'=>'Nama Urusan',
+								'labelWidth'=>100, 
+								'value'=>"<input type='text' name='kode_urusan' value='$kode_urusan' size='15px' id='kode_urusan' readonly>
+										  <input type='text' name='nama_urusan' value='".$dt['nm_urusan']."' size='60px' id='nama_urusan' readonly>
+										  <input type='button' value='Cari' onclick ='".$this->Prefix.".CariUrusan()' title='Cari Urusan' >" 
+									 ),
+SePage_OtherScript
+"<script type='text/javascript' src='js/master/refurusan/refurusan.js' language='JavaScript' ></script>".
+		 
+JS
+CariUrusan: function(){
+		var me = this;	
+		
+		refurusan.el_kode_urusan = 'kode_urusan';
+		refurusan.el_nama_urusan = 'nama_urusan';
+		refurusan.windowSaveAfter= function(){};
+		refurusan.windowShow();	
+	},
